@@ -1,0 +1,9 @@
+{
+ "_type": "playlist",
+ "id": "@TED",
+ "title": "TED",
+ "webpage_url": "https://www.youtube.com/@TED",
+ "original_url": "https://www.youtube.com/@TED",
+ "extractor": "youtube:tab",
+ "entries": []
+}

@@ -1,0 +1,2112 @@
+{
+ "_type": "video",
+ "id": "arj7oStGLkU",
+ "title": "Inside the Mind of a Master Procrastinator | Tim Urban | TED",
+ "webpage_url": "https://www.youtube.com/watch?v=arj7oStGLkU",
+ "original_url": "https://www.youtube.com/watch?v=arj7oStGLkU",
+ "extractor": "youtube",
+ "is_live": false,
+ "live_status": "not_live",
+ "duration": 844,
+ "language": "en",
+ "protocol": "https",
+ "acodec": "opus",
+ "vcodec": "none",
+ "width": null,
+ "height": null,
+ "format_id": "251",
+ "url": "https://media.example.invalid/youtube_vod_ted/selected",
+ "http_headers": {
+  "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+ },
+ "formats": [
+  {
+   "format_id": "233",
+   "protocol": "m3u8_native",
+   "vcodec": "none",
+   "url": "https://media.example.invalid/youtube_vod_ted/233",
+   "http_headers": {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+   }
+  },
+  {
+   "format_id": "234",
+   "protocol": "m3u8_native",
+   "vcodec": "none",
+   "url": "https://media.example.invalid/youtube_vod_ted/234",
+   "http_headers": {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+   }
+  },
+  {
+   "format_id": "139-drc",
+   "protocol": "https",
+   "acodec": "mp4a.40.5",
+   "vcodec": "none",
+   "width": null,
+   "height": null,
+   "url": "https://media.example.invalid/youtube_vod_ted/139-drc",
+   "http_headers": {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+   }
+  },
+  {
+   "format_id": "249-drc",
+   "protocol": "https",
+   "acodec": "opus",
+   "vcodec": "none",
+   "width": null,
+   "height": null,
+   "url": "https://media.example.invalid/youtube_vod_ted/249-drc",
+   "http_headers": {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+   }
+  },
+  {
+   "format_id": "250-drc",
+   "protocol": "https",
+   "acodec": "opus",
+   "vcodec": "none",
+   "width": null,
+   "height": null,
+   "url": "https://media.example.invalid/youtube_vod_ted/250-drc",
+   "http_headers": {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+   }
+  },
+  {
+   "format_id": "139",
+   "protocol": "https",
+   "acodec": "mp4a.40.5",
+   "vcodec": "none",
+   "width": null,
+   "height": null,
+   "url": "https://media.example.invalid/youtube_vod_ted/139",
+   "http_headers": {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+   }
+  },
+  {
+   "format_id": "249",
+   "protocol": "https",
+   "acodec": "opus",
+   "vcodec": "none",
+   "width": null,
+   "height": null,
+   "url": "https://media.example.invalid/youtube_vod_ted/249",
+   "http_headers": {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+   }
+  },
+  {
+   "format_id": "250",
+   "protocol": "https",
+   "acodec": "opus",
+   "vcodec": "none",
+   "width": null,
+   "height": null,
+   "url": "https://media.example.invalid/youtube_vod_ted/250",
+   "http_headers": {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+   }
+  },
+  {
+   "format_id": "140-drc",
+   "protocol": "https",
+   "acodec": "mp4a.40.2",
+   "vcodec": "none",
+   "width": null,
+   "height": null,
+   "url": "https://media.example.invalid/youtube_vod_ted/140-drc",
+   "http_headers": {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+   }
+  },
+  {
+   "format_id": "251-drc",
+   "protocol": "https",
+   "acodec": "opus",
+   "vcodec": "none",
+   "width": null,
+   "height": null,
+   "url": "https://media.example.invalid/youtube_vod_ted/251-drc",
+   "http_headers": {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+   }
+  },
+  {
+   "format_id": "140",
+   "protocol": "https",
+   "acodec": "mp4a.40.2",
+   "vcodec": "none",
+   "width": null,
+   "height": null,
+   "url": "https://media.example.invalid/youtube_vod_ted/140",
+   "http_headers": {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+   }
+  },
+  {
+   "format_id": "251",
+   "protocol": "https",
+   "acodec": "opus",
+   "vcodec": "none",
+   "width": null,
+   "height": null,
+   "url": "https://media.example.invalid/youtube_vod_ted/251",
+   "http_headers": {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+   }
+  },
+  {
+   "format_id": "602",
+   "protocol": "m3u8_native",
+   "acodec": "none",
+   "vcodec": "vp09.00.10.08",
+   "width": 256,
+   "height": 144,
+   "url": "https://media.example.invalid/youtube_vod_ted/602",
+   "http_headers": {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+   }
+  },
+  {
+   "format_id": "269",
+   "protocol": "m3u8_native",
+   "acodec": "none",
+   "vcodec": "avc1.4D400C",
+   "width": 256,
+   "height": 144,
+   "url": "https://media.example.invalid/youtube_vod_ted/269",
+   "http_headers": {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+   }
+  },
+  {
+   "format_id": "160",
+   "protocol": "https",
+   "acodec": "none",
+   "vcodec": "avc1.4D400C",
+   "width": 256,
+   "height": 144,
+   "url": "https://media.example.invalid/youtube_vod_ted/160",
+   "http_headers": {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+   }
+  },
+  {
+   "format_id": "603",
+   "protocol": "m3u8_native",
+   "acodec": "none",
+   "vcodec": "vp09.00.11.08",
+   "width": 256,
+   "height": 144,
+   "url": "https://media.example.invalid/youtube_vod_ted/603",
+   "http_headers": {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+   }
+  },
+  {
+   "format_id": "278",
+   "protocol": "https",
+   "acodec": "none",
+   "vcodec": "vp9",
+   "width": 256,
+   "height": 144,
+   "url": "https://media.example.invalid/youtube_vod_ted/278",
+   "http_headers": {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+   }
+  },
+  {
+   "format_id": "394",
+   "protocol": "https",
+   "acodec": "none",
+   "vcodec": "av01.0.00M.08",
+   "width": 256,
+   "height": 144,
+   "url": "https://media.example.invalid/youtube_vod_ted/394",
+   "http_headers": {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+   }
+  },
+  {
+   "format_id": "229",
+   "protocol": "m3u8_native",
+   "acodec": "none",
+   "vcodec": "avc1.4D4015",
+   "width": 426,
+   "height": 240,
+   "url": "https://media.example.invalid/youtube_vod_ted/229",
+   "http_headers": {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+   }
+  },
+  {
+   "format_id": "133",
+   "protocol": "https",
+   "acodec": "none",
+   "vcodec": "avc1.4D4015",
+   "width": 426,
+   "height": 240,
+   "url": "https://media.example.invalid/youtube_vod_ted/133",
+   "http_headers": {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+   }
+  },
+  {
+   "format_id": "604",
+   "protocol": "m3u8_native",
+   "acodec": "none",
+   "vcodec": "vp09.00.20.08",
+   "width": 426,
+   "height": 240,
+   "url": "https://media.example.invalid/youtube_vod_ted/604",
+   "http_headers": {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+   }
+  },
+  {
+   "format_id": "242",
+   "protocol": "https",
+   "acodec": "none",
+   "vcodec": "vp9",
+   "width": 426,
+   "height": 240,
+   "url": "https://media.example.invalid/youtube_vod_ted/242",
+   "http_headers": {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+   }
+  },
+  {
+   "format_id": "395",
+   "protocol": "https",
+   "acodec": "none",
+   "vcodec": "av01.0.00M.08",
+   "width": 426,
+   "height": 240,
+   "url": "https://media.example.invalid/youtube_vod_ted/395",
+   "http_headers": {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+   }
+  },
+  {
+   "format_id": "230",
+   "protocol": "m3u8_native",
+   "acodec": "none",
+   "vcodec": "avc1.4D401E",
+   "width": 640,
+   "height": 360,
+   "url": "https://media.example.invalid/youtube_vod_ted/230",
+   "http_headers": {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+   }
+  },
+  {
+   "format_id": "134",
+   "protocol": "https",
+   "acodec": "none",
+   "vcodec": "avc1.4D401E",
+   "width": 640,
+   "height": 360,
+   "url": "https://media.example.invalid/youtube_vod_ted/134",
+   "http_headers": {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+   }
+  },
+  {
+   "format_id": "18",
+   "protocol": "https",
+   "acodec": "mp4a.40.2",
+   "vcodec": "avc1.42001E",
+   "width": 640,
+   "height": 360,
+   "url": "https://media.example.invalid/youtube_vod_ted/18",
+   "http_headers": {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+   }
+  },
+  {
+   "format_id": "605",
+   "protocol": "m3u8_native",
+   "acodec": "none",
+   "vcodec": "vp09.00.21.08",
+   "width": 640,
+   "height": 360,
+   "url": "https://media.example.invalid/youtube_vod_ted/605",
+   "http_headers": {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+   }
+  },
+  {
+   "format_id": "243",
+   "protocol": "https",
+   "acodec": "none",
+   "vcodec": "vp9",
+   "width": 640,
+   "height": 360,
+   "url": "https://media.example.invalid/youtube_vod_ted/243",
+   "http_headers": {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+   }
+  },
+  {
+   "format_id": "396",
+   "protocol": "https",
+   "acodec": "none",
+   "vcodec": "av01.0.01M.08",
+   "width": 640,
+   "height": 360,
+   "url": "https://media.example.invalid/youtube_vod_ted/396",
+   "http_headers": {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+   }
+  },
+  {
+   "format_id": "231",
+   "protocol": "m3u8_native",
+   "acodec": "none",
+   "vcodec": "avc1.4D401E",
+   "width": 854,
+   "height": 480,
+   "url": "https://media.example.invalid/youtube_vod_ted/231",
+   "http_headers": {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+   }
+  },
+  {
+   "format_id": "135",
+   "protocol": "https",
+   "acodec": "none",
+   "vcodec": "avc1.4D401E",
+   "width": 854,
+   "height": 480,
+   "url": "https://media.example.invalid/youtube_vod_ted/135",
+   "http_headers": {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+   }
+  },
+  {
+   "format_id": "606",
+   "protocol": "m3u8_native",
+   "acodec": "none",
+   "vcodec": "vp09.00.30.08",
+   "width": 854,
+   "height": 480,
+   "url": "https://media.example.invalid/youtube_vod_ted/606",
+   "http_headers": {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+   }
+  },
+  {
+   "format_id": "244",
+   "protocol": "https",
+   "acodec": "none",
+   "vcodec": "vp9",
+   "width": 854,
+   "height": 480,
+   "url": "https://media.example.invalid/youtube_vod_ted/244",
+   "http_headers": {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+   }
+  },
+  {
+   "format_id": "397",
+   "protocol": "https",
+   "acodec": "none",
+   "vcodec": "av01.0.04M.08",
+   "width": 854,
+   "height": 480,
+   "url": "https://media.example.invalid/youtube_vod_ted/397",
+   "http_headers": {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+   }
+  },
+  {
+   "format_id": "232",
+   "protocol": "m3u8_native",
+   "acodec": "none",
+   "vcodec": "avc1.4D401F",
+   "width": 1280,
+   "height": 720,
+   "url": "https://media.example.invalid/youtube_vod_ted/232",
+   "http_headers": {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+   }
+  },
+  {
+   "format_id": "136",
+   "protocol": "https",
+   "acodec": "none",
+   "vcodec": "avc1.4D401F",
+   "width": 1280,
+   "height": 720,
+   "url": "https://media.example.invalid/youtube_vod_ted/136",
+   "http_headers": {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+   }
+  },
+  {
+   "format_id": "609",
+   "protocol": "m3u8_native",
+   "acodec": "none",
+   "vcodec": "vp09.00.31.08",
+   "width": 1280,
+   "height": 720,
+   "url": "https://media.example.invalid/youtube_vod_ted/609",
+   "http_headers": {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+   }
+  },
+  {
+   "format_id": "247",
+   "protocol": "https",
+   "acodec": "none",
+   "vcodec": "vp9",
+   "width": 1280,
+   "height": 720,
+   "url": "https://media.example.invalid/youtube_vod_ted/247",
+   "http_headers": {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+   }
+  },
+  {
+   "format_id": "398",
+   "protocol": "https",
+   "acodec": "none",
+   "vcodec": "av01.0.05M.08",
+   "width": 1280,
+   "height": 720,
+   "url": "https://media.example.invalid/youtube_vod_ted/398",
+   "http_headers": {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+   }
+  },
+  {
+   "format_id": "248-sr",
+   "protocol": "https",
+   "acodec": "none",
+   "vcodec": "vp9",
+   "width": 1920,
+   "height": 1080,
+   "url": "https://media.example.invalid/youtube_vod_ted/248-sr",
+   "http_headers": {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+   }
+  },
+  {
+   "format_id": "399-sr",
+   "protocol": "https",
+   "acodec": "none",
+   "vcodec": "av01.0.08M.08",
+   "width": 1920,
+   "height": 1080,
+   "url": "https://media.example.invalid/youtube_vod_ted/399-sr",
+   "http_headers": {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36"
+   }
+  }
+ ],
+ "subtitles": {
+  "ar": [
+   {
+    "ext": "json3",
+    "url": "https://subs.example.invalid/youtube_vod_ted/ar.json3"
+   },
+   {
+    "ext": "srv1",
+    "url": "https://subs.example.invalid/youtube_vod_ted/ar.srv1"
+   },
+   {
+    "ext": "srv2",
+    "url": "https://subs.example.invalid/youtube_vod_ted/ar.srv2"
+   },
+   {
+    "ext": "srv3",
+    "url": "https://subs.example.invalid/youtube_vod_ted/ar.srv3"
+   },
+   {
+    "ext": "ttml",
+    "url": "https://subs.example.invalid/youtube_vod_ted/ar.ttml"
+   },
+   {
+    "ext": "srt",
+    "url": "https://subs.example.invalid/youtube_vod_ted/ar.srt"
+   },
+   {
+    "ext": "vtt",
+    "url": "https://subs.example.invalid/youtube_vod_ted/ar.vtt"
+   }
+  ],
+  "hy": [
+   {
+    "ext": "json3",
+    "url": "https://subs.example.invalid/youtube_vod_ted/hy.json3"
+   },
+   {
+    "ext": "srv1",
+    "url": "https://subs.example.invalid/youtube_vod_ted/hy.srv1"
+   },
+   {
+    "ext": "srv2",
+    "url": "https://subs.example.invalid/youtube_vod_ted/hy.srv2"
+   },
+   {
+    "ext": "srv3",
+    "url": "https://subs.example.invalid/youtube_vod_ted/hy.srv3"
+   },
+   {
+    "ext": "ttml",
+    "url": "https://subs.example.invalid/youtube_vod_ted/hy.ttml"
+   },
+   {
+    "ext": "srt",
+    "url": "https://subs.example.invalid/youtube_vod_ted/hy.srt"
+   },
+   {
+    "ext": "vtt",
+    "url": "https://subs.example.invalid/youtube_vod_ted/hy.vtt"
+   }
+  ],
+  "bg": [
+   {
+    "ext": "json3",
+    "url": "https://subs.example.invalid/youtube_vod_ted/bg.json3"
+   },
+   {
+    "ext": "srv1",
+    "url": "https://subs.example.invalid/youtube_vod_ted/bg.srv1"
+   },
+   {
+    "ext": "srv2",
+    "url": "https://subs.example.invalid/youtube_vod_ted/bg.srv2"
+   },
+   {
+    "ext": "srv3",
+    "url": "https://subs.example.invalid/youtube_vod_ted/bg.srv3"
+   },
+   {
+    "ext": "ttml",
+    "url": "https://subs.example.invalid/youtube_vod_ted/bg.ttml"
+   },
+   {
+    "ext": "srt",
+    "url": "https://subs.example.invalid/youtube_vod_ted/bg.srt"
+   },
+   {
+    "ext": "vtt",
+    "url": "https://subs.example.invalid/youtube_vod_ted/bg.vtt"
+   }
+  ],
+  "my": [
+   {
+    "ext": "json3",
+    "url": "https://subs.example.invalid/youtube_vod_ted/my.json3"
+   },
+   {
+    "ext": "srv1",
+    "url": "https://subs.example.invalid/youtube_vod_ted/my.srv1"
+   },
+   {
+    "ext": "srv2",
+    "url": "https://subs.example.invalid/youtube_vod_ted/my.srv2"
+   },
+   {
+    "ext": "srv3",
+    "url": "https://subs.example.invalid/youtube_vod_ted/my.srv3"
+   },
+   {
+    "ext": "ttml",
+    "url": "https://subs.example.invalid/youtube_vod_ted/my.ttml"
+   },
+   {
+    "ext": "srt",
+    "url": "https://subs.example.invalid/youtube_vod_ted/my.srt"
+   },
+   {
+    "ext": "vtt",
+    "url": "https://subs.example.invalid/youtube_vod_ted/my.vtt"
+   }
+  ],
+  "ca": [
+   {
+    "ext": "json3",
+    "url": "https://subs.example.invalid/youtube_vod_ted/ca.json3"
+   },
+   {
+    "ext": "srv1",
+    "url": "https://subs.example.invalid/youtube_vod_ted/ca.srv1"
+   },
+   {
+    "ext": "srv2",
+    "url": "https://subs.example.invalid/youtube_vod_ted/ca.srv2"
+   },
+   {
+    "ext": "srv3",
+    "url": "https://subs.example.invalid/youtube_vod_ted/ca.srv3"
+   },
+   {
+    "ext": "ttml",
+    "url": "https://subs.example.invalid/youtube_vod_ted/ca.ttml"
+   },
+   {
+    "ext": "srt",
+    "url": "https://subs.example.invalid/youtube_vod_ted/ca.srt"
+   },
+   {
+    "ext": "vtt",
+    "url": "https://subs.example.invalid/youtube_vod_ted/ca.vtt"
+   }
+  ],
+  "ckb": [
+   {
+    "ext": "json3",
+    "url": "https://subs.example.invalid/youtube_vod_ted/ckb.json3"
+   },
+   {
+    "ext": "srv1",
+    "url": "https://subs.example.invalid/youtube_vod_ted/ckb.srv1"
+   },
+   {
+    "ext": "srv2",
+    "url": "https://subs.example.invalid/youtube_vod_ted/ckb.srv2"
+   },
+   {
+    "ext": "srv3",
+    "url": "https://subs.example.invalid/youtube_vod_ted/ckb.srv3"
+   },
+   {
+    "ext": "ttml",
+    "url": "https://subs.example.invalid/youtube_vod_ted/ckb.ttml"
+   },
+   {
+    "ext": "srt",
+    "url": "https://subs.example.invalid/youtube_vod_ted/ckb.srt"
+   },
+   {
+    "ext": "vtt",
+    "url": "https://subs.example.invalid/youtube_vod_ted/ckb.vtt"
+   }
+  ],
+  "zh-CN": [
+   {
+    "ext": "json3",
+    "url": "https://subs.example.invalid/youtube_vod_ted/zh-CN.json3"
+   },
+   {
+    "ext": "srv1",
+    "url": "https://subs.example.invalid/youtube_vod_ted/zh-CN.srv1"
+   },
+   {
+    "ext": "srv2",
+    "url": "https://subs.example.invalid/youtube_vod_ted/zh-CN.srv2"
+   },
+   {
+    "ext": "srv3",
+    "url": "https://subs.example.invalid/youtube_vod_ted/zh-CN.srv3"
+   },
+   {
+    "ext": "ttml",
+    "url": "https://subs.example.invalid/youtube_vod_ted/zh-CN.ttml"
+   },
+   {
+    "ext": "srt",
+    "url": "https://subs.example.invalid/youtube_vod_ted/zh-CN.srt"
+   },
+   {
+    "ext": "vtt",
+    "url": "https://subs.example.invalid/youtube_vod_ted/zh-CN.vtt"
+   }
+  ],
+  "zh-TW": [
+   {
+    "ext": "json3",
+    "url": "https://subs.example.invalid/youtube_vod_ted/zh-TW.json3"
+   },
+   {
+    "ext": "srv1",
+    "url": "https://subs.example.invalid/youtube_vod_ted/zh-TW.srv1"
+   },
+   {
+    "ext": "srv2",
+    "url": "https://subs.example.invalid/youtube_vod_ted/zh-TW.srv2"
+   },
+   {
+    "ext": "srv3",
+    "url": "https://subs.example.invalid/youtube_vod_ted/zh-TW.srv3"
+   },
+   {
+    "ext": "ttml",
+    "url": "https://subs.example.invalid/youtube_vod_ted/zh-TW.ttml"
+   },
+   {
+    "ext": "srt",
+    "url": "https://subs.example.invalid/youtube_vod_ted/zh-TW.srt"
+   },
+   {
+    "ext": "vtt",
+    "url": "https://subs.example.invalid/youtube_vod_ted/zh-TW.vtt"
+   }
+  ],
+  "hr": [
+   {
+    "ext": "json3",
+    "url": "https://subs.example.invalid/youtube_vod_ted/hr.json3"
+   },
+   {
+    "ext": "srv1",
+    "url": "https://subs.example.invalid/youtube_vod_ted/hr.srv1"
+   },
+   {
+    "ext": "srv2",
+    "url": "https://subs.example.invalid/youtube_vod_ted/hr.srv2"
+   },
+   {
+    "ext": "srv3",
+    "url": "https://subs.example.invalid/youtube_vod_ted/hr.srv3"
+   },
+   {
+    "ext": "ttml",
+    "url": "https://subs.example.invalid/youtube_vod_ted/hr.ttml"
+   },
+   {
+    "ext": "srt",
+    "url": "https://subs.example.invalid/youtube_vod_ted/hr.srt"
+   },
+   {
+    "ext": "vtt",
+    "url": "https://subs.example.invalid/youtube_vod_ted/hr.vtt"
+   }
+  ],
+  "cs": [
+   {
+    "ext": "json3",
+    "url": "https://subs.example.invalid/youtube_vod_ted/cs.json3"
+   },
+   {
+    "ext": "srv1",
+    "url": "https://subs.example.invalid/youtube_vod_ted/cs.srv1"
+   },
+   {
+    "ext": "srv2",
+    "url": "https://subs.example.invalid/youtube_vod_ted/cs.srv2"
+   },
+   {
+    "ext": "srv3",
+    "url": "https://subs.example.invalid/youtube_vod_ted/cs.srv3"
+   },
+   {
+    "ext": "ttml",
+    "url": "https://subs.example.invalid/youtube_vod_ted/cs.ttml"
+   },
+   {
+    "ext": "srt",
+    "url": "https://subs.example.invalid/youtube_vod_ted/cs.srt"
+   },
+   {
+    "ext": "vtt",
+    "url": "https://subs.example.invalid/youtube_vod_ted/cs.vtt"
+   }
+  ],
+  "da": [
+   {
+    "ext": "json3",
+    "url": "https://subs.example.invalid/youtube_vod_ted/da.json3"
+   },
+   {
+    "ext": "srv1",
+    "url": "https://subs.example.invalid/youtube_vod_ted/da.srv1"
+   },
+   {
+    "ext": "srv2",
+    "url": "https://subs.example.invalid/youtube_vod_ted/da.srv2"
+   },
+   {
+    "ext": "srv3",
+    "url": "https://subs.example.invalid/youtube_vod_ted/da.srv3"
+   },
+   {
+    "ext": "ttml",
+    "url": "https://subs.example.invalid/youtube_vod_ted/da.ttml"
+   },
+   {
+    "ext": "srt",
+    "url": "https://subs.example.invalid/youtube_vod_ted/da.srt"
+   },
+   {
+    "ext": "vtt",
+    "url": "https://subs.example.invalid/youtube_vod_ted/da.vtt"
+   }
+  ],
+  "nl": [
+   {
+    "ext": "json3",
+    "url": "https://subs.example.invalid/youtube_vod_ted/nl.json3"
+   },
+   {
+    "ext": "srv1",
+    "url": "https://subs.example.invalid/youtube_vod_ted/nl.srv1"
+   },
+   {
+    "ext": "srv2",
+    "url": "https://subs.example.invalid/youtube_vod_ted/nl.srv2"
+   },
+   {
+    "ext": "srv3",
+    "url": "https://subs.example.invalid/youtube_vod_ted/nl.srv3"
+   },
+   {
+    "ext": "ttml",
+    "url": "https://subs.example.invalid/youtube_vod_ted/nl.ttml"
+   },
+   {
+    "ext": "srt",
+    "url": "https://subs.example.invalid/youtube_vod_ted/nl.srt"
+   },
+   {
+    "ext": "vtt",
+    "url": "https://subs.example.invalid/youtube_vod_ted/nl.vtt"
+   }
+  ],
+  "en": [
+   {
+    "ext": "json3",
+    "url": "https://subs.example.invalid/youtube_vod_ted/en.json3"
+   },
+   {
+    "ext": "srv1",
+    "url": "https://subs.example.invalid/youtube_vod_ted/en.srv1"
+   },
+   {
+    "ext": "srv2",
+    "url": "https://subs.example.invalid/youtube_vod_ted/en.srv2"
+   },
+   {
+    "ext": "srv3",
+    "url": "https://subs.example.invalid/youtube_vod_ted/en.srv3"
+   },
+   {
+    "ext": "ttml",
+    "url": "https://subs.example.invalid/youtube_vod_ted/en.ttml"
+   },
+   {
+    "ext": "srt",
+    "url": "https://subs.example.invalid/youtube_vod_ted/en.srt"
+   },
+   {
+    "ext": "vtt",
+    "url": "https://subs.example.invalid/youtube_vod_ted/en.vtt"
+   }
+  ],
+  "et": [
+   {
+    "ext": "json3",
+    "url": "https://subs.example.invalid/youtube_vod_ted/et.json3"
+   },
+   {
+    "ext": "srv1",
+    "url": "https://subs.example.invalid/youtube_vod_ted/et.srv1"
+   },
+   {
+    "ext": "srv2",
+    "url": "https://subs.example.invalid/youtube_vod_ted/et.srv2"
+   },
+   {
+    "ext": "srv3",
+    "url": "https://subs.example.invalid/youtube_vod_ted/et.srv3"
+   },
+   {
+    "ext": "ttml",
+    "url": "https://subs.example.invalid/youtube_vod_ted/et.ttml"
+   },
+   {
+    "ext": "srt",
+    "url": "https://subs.example.invalid/youtube_vod_ted/et.srt"
+   },
+   {
+    "ext": "vtt",
+    "url": "https://subs.example.invalid/youtube_vod_ted/et.vtt"
+   }
+  ],
+  "fi": [
+   {
+    "ext": "json3",
+    "url": "https://subs.example.invalid/youtube_vod_ted/fi.json3"
+   },
+   {
+    "ext": "srv1",
+    "url": "https://subs.example.invalid/youtube_vod_ted/fi.srv1"
+   },
+   {
+    "ext": "srv2",
+    "url": "https://subs.example.invalid/youtube_vod_ted/fi.srv2"
+   },
+   {
+    "ext": "srv3",
+    "url": "https://subs.example.invalid/youtube_vod_ted/fi.srv3"
+   },
+   {
+    "ext": "ttml",
+    "url": "https://subs.example.invalid/youtube_vod_ted/fi.ttml"
+   },
+   {
+    "ext": "srt",
+    "url": "https://subs.example.invalid/youtube_vod_ted/fi.srt"
+   },
+   {
+    "ext": "vtt",
+    "url": "https://subs.example.invalid/youtube_vod_ted/fi.vtt"
+   }
+  ],
+  "fr": [
+   {
+    "ext": "json3",
+    "url": "https://subs.example.invalid/youtube_vod_ted/fr.json3"
+   },
+   {
+    "ext": "srv1",
+    "url": "https://subs.example.invalid/youtube_vod_ted/fr.srv1"
+   },
+   {
+    "ext": "srv2",
+    "url": "https://subs.example.invalid/youtube_vod_ted/fr.srv2"
+   },
+   {
+    "ext": "srv3",
+    "url": "https://subs.example.invalid/youtube_vod_ted/fr.srv3"
+   },
+   {
+    "ext": "ttml",
+    "url": "https://subs.example.invalid/youtube_vod_ted/fr.ttml"
+   },
+   {
+    "ext": "srt",
+    "url": "https://subs.example.invalid/youtube_vod_ted/fr.srt"
+   },
+   {
+    "ext": "vtt",
+    "url": "https://subs.example.invalid/youtube_vod_ted/fr.vtt"
+   }
+  ],
+  "fr-CA": [
+   {
+    "ext": "json3",
+    "url": "https://subs.example.invalid/youtube_vod_ted/fr-CA.json3"
+   },
+   {
+    "ext": "srv1",
+    "url": "https://subs.example.invalid/youtube_vod_ted/fr-CA.srv1"
+   },
+   {
+    "ext": "srv2",
+    "url": "https://subs.example.invalid/youtube_vod_ted/fr-CA.srv2"
+   },
+   {
+    "ext": "srv3",
+    "url": "https://subs.example.invalid/youtube_vod_ted/fr-CA.srv3"
+   },
+   {
+    "ext": "ttml",
+    "url": "https://subs.example.invalid/youtube_vod_ted/fr-CA.ttml"
+   },
+   {
+    "ext": "srt",
+    "url": "https://subs.example.invalid/youtube_vod_ted/fr-CA.srt"
+   },
+   {
+    "ext": "vtt",
+    "url": "https://subs.example.invalid/youtube_vod_ted/fr-CA.vtt"
+   }
+  ],
+  "gl": [
+   {
+    "ext": "json3",
+    "url": "https://subs.example.invalid/youtube_vod_ted/gl.json3"
+   },
+   {
+    "ext": "srv1",
+    "url": "https://subs.example.invalid/youtube_vod_ted/gl.srv1"
+   },
+   {
+    "ext": "srv2",
+    "url": "https://subs.example.invalid/youtube_vod_ted/gl.srv2"
+   },
+   {
+    "ext": "srv3",
+    "url": "https://subs.example.invalid/youtube_vod_ted/gl.srv3"
+   },
+   {
+    "ext": "ttml",
+    "url": "https://subs.example.invalid/youtube_vod_ted/gl.ttml"
+   },
+   {
+    "ext": "srt",
+    "url": "https://subs.example.invalid/youtube_vod_ted/gl.srt"
+   },
+   {
+    "ext": "vtt",
+    "url": "https://subs.example.invalid/youtube_vod_ted/gl.vtt"
+   }
+  ],
+  "de": [
+   {
+    "ext": "json3",
+    "url": "https://subs.example.invalid/youtube_vod_ted/de.json3"
+   },
+   {
+    "ext": "srv1",
+    "url": "https://subs.example.invalid/youtube_vod_ted/de.srv1"
+   },
+   {
+    "ext": "srv2",
+    "url": "https://subs.example.invalid/youtube_vod_ted/de.srv2"
+   },
+   {
+    "ext": "srv3",
+    "url": "https://subs.example.invalid/youtube_vod_ted/de.srv3"
+   },
+   {
+    "ext": "ttml",
+    "url": "https://subs.example.invalid/youtube_vod_ted/de.ttml"
+   },
+   {
+    "ext": "srt",
+    "url": "https://subs.example.invalid/youtube_vod_ted/de.srt"
+   },
+   {
+    "ext": "vtt",
+    "url": "https://subs.example.invalid/youtube_vod_ted/de.vtt"
+   }
+  ],
+  "el": [
+   {
+    "ext": "json3",
+    "url": "https://subs.example.invalid/youtube_vod_ted/el.json3"
+   },
+   {
+    "ext": "srv1",
+    "url": "https://subs.example.invalid/youtube_vod_ted/el.srv1"
+   },
+   {
+    "ext": "srv2",
+    "url": "https://subs.example.invalid/youtube_vod_ted/el.srv2"
+   },
+   {
+    "ext": "srv3",
+    "url": "https://subs.example.invalid/youtube_vod_ted/el.srv3"
+   },
+   {
+    "ext": "ttml",
+    "url": "https://subs.example.invalid/youtube_vod_ted/el.ttml"
+   },
+   {
+    "ext": "srt",
+    "url": "https://subs.example.invalid/youtube_vod_ted/el.srt"
+   },
+   {
+    "ext": "vtt",
+    "url": "https://subs.example.invalid/youtube_vod_ted/el.vtt"
+   }
+  ],
+  "iw": [
+   {
+    "ext": "json3",
+    "url": "https://subs.example.invalid/youtube_vod_ted/iw.json3"
+   },
+   {
+    "ext": "srv1",
+    "url": "https://subs.example.invalid/youtube_vod_ted/iw.srv1"
+   },
+   {
+    "ext": "srv2",
+    "url": "https://subs.example.invalid/youtube_vod_ted/iw.srv2"
+   },
+   {
+    "ext": "srv3",
+    "url": "https://subs.example.invalid/youtube_vod_ted/iw.srv3"
+   },
+   {
+    "ext": "ttml",
+    "url": "https://subs.example.invalid/youtube_vod_ted/iw.ttml"
+   },
+   {
+    "ext": "srt",
+    "url": "https://subs.example.invalid/youtube_vod_ted/iw.srt"
+   },
+   {
+    "ext": "vtt",
+    "url": "https://subs.example.invalid/youtube_vod_ted/iw.vtt"
+   }
+  ],
+  "hi": [
+   {
+    "ext": "json3",
+    "url": "https://subs.example.invalid/youtube_vod_ted/hi.json3"
+   },
+   {
+    "ext": "srv1",
+    "url": "https://subs.example.invalid/youtube_vod_ted/hi.srv1"
+   },
+   {
+    "ext": "srv2",
+    "url": "https://subs.example.invalid/youtube_vod_ted/hi.srv2"
+   },
+   {
+    "ext": "srv3",
+    "url": "https://subs.example.invalid/youtube_vod_ted/hi.srv3"
+   },
+   {
+    "ext": "ttml",
+    "url": "https://subs.example.invalid/youtube_vod_ted/hi.ttml"
+   },
+   {
+    "ext": "srt",
+    "url": "https://subs.example.invalid/youtube_vod_ted/hi.srt"
+   },
+   {
+    "ext": "vtt",
+    "url": "https://subs.example.invalid/youtube_vod_ted/hi.vtt"
+   }
+  ],
+  "hu": [
+   {
+    "ext": "json3",
+    "url": "https://subs.example.invalid/youtube_vod_ted/hu.json3"
+   },
+   {
+    "ext": "srv1",
+    "url": "https://subs.example.invalid/youtube_vod_ted/hu.srv1"
+   },
+   {
+    "ext": "srv2",
+    "url": "https://subs.example.invalid/youtube_vod_ted/hu.srv2"
+   },
+   {
+    "ext": "srv3",
+    "url": "https://subs.example.invalid/youtube_vod_ted/hu.srv3"
+   },
+   {
+    "ext": "ttml",
+    "url": "https://subs.example.invalid/youtube_vod_ted/hu.ttml"
+   },
+   {
+    "ext": "srt",
+    "url": "https://subs.example.invalid/youtube_vod_ted/hu.srt"
+   },
+   {
+    "ext": "vtt",
+    "url": "https://subs.example.invalid/youtube_vod_ted/hu.vtt"
+   }
+  ],
+  "id": [
+   {
+    "ext": "json3",
+    "url": "https://subs.example.invalid/youtube_vod_ted/id.json3"
+   },
+   {
+    "ext": "srv1",
+    "url": "https://subs.example.invalid/youtube_vod_ted/id.srv1"
+   },
+   {
+    "ext": "srv2",
+    "url": "https://subs.example.invalid/youtube_vod_ted/id.srv2"
+   },
+   {
+    "ext": "srv3",
+    "url": "https://subs.example.invalid/youtube_vod_ted/id.srv3"
+   },
+   {
+    "ext": "ttml",
+    "url": "https://subs.example.invalid/youtube_vod_ted/id.ttml"
+   },
+   {
+    "ext": "srt",
+    "url": "https://subs.example.invalid/youtube_vod_ted/id.srt"
+   },
+   {
+    "ext": "vtt",
+    "url": "https://subs.example.invalid/youtube_vod_ted/id.vtt"
+   }
+  ],
+  "it": [
+   {
+    "ext": "json3",
+    "url": "https://subs.example.invalid/youtube_vod_ted/it.json3"
+   },
+   {
+    "ext": "srv1",
+    "url": "https://subs.example.invalid/youtube_vod_ted/it.srv1"
+   },
+   {
+    "ext": "srv2",
+    "url": "https://subs.example.invalid/youtube_vod_ted/it.srv2"
+   },
+   {
+    "ext": "srv3",
+    "url": "https://subs.example.invalid/youtube_vod_ted/it.srv3"
+   },
+   {
+    "ext": "ttml",
+    "url": "https://subs.example.invalid/youtube_vod_ted/it.ttml"
+   },
+   {
+    "ext": "srt",
+    "url": "https://subs.example.invalid/youtube_vod_ted/it.srt"
+   },
+   {
+    "ext": "vtt",
+    "url": "https://subs.example.invalid/youtube_vod_ted/it.vtt"
+   }
+  ],
+  "ja": [
+   {
+    "ext": "json3",
+    "url": "https://subs.example.invalid/youtube_vod_ted/ja.json3"
+   },
+   {
+    "ext": "srv1",
+    "url": "https://subs.example.invalid/youtube_vod_ted/ja.srv1"
+   },
+   {
+    "ext": "srv2",
+    "url": "https://subs.example.invalid/youtube_vod_ted/ja.srv2"
+   },
+   {
+    "ext": "srv3",
+    "url": "https://subs.example.invalid/youtube_vod_ted/ja.srv3"
+   },
+   {
+    "ext": "ttml",
+    "url": "https://subs.example.invalid/youtube_vod_ted/ja.ttml"
+   },
+   {
+    "ext": "srt",
+    "url": "https://subs.example.invalid/youtube_vod_ted/ja.srt"
+   },
+   {
+    "ext": "vtt",
+    "url": "https://subs.example.invalid/youtube_vod_ted/ja.vtt"
+   }
+  ],
+  "ko": [
+   {
+    "ext": "json3",
+    "url": "https://subs.example.invalid/youtube_vod_ted/ko.json3"
+   },
+   {
+    "ext": "srv1",
+    "url": "https://subs.example.invalid/youtube_vod_ted/ko.srv1"
+   },
+   {
+    "ext": "srv2",
+    "url": "https://subs.example.invalid/youtube_vod_ted/ko.srv2"
+   },
+   {
+    "ext": "srv3",
+    "url": "https://subs.example.invalid/youtube_vod_ted/ko.srv3"
+   },
+   {
+    "ext": "ttml",
+    "url": "https://subs.example.invalid/youtube_vod_ted/ko.ttml"
+   },
+   {
+    "ext": "srt",
+    "url": "https://subs.example.invalid/youtube_vod_ted/ko.srt"
+   },
+   {
+    "ext": "vtt",
+    "url": "https://subs.example.invalid/youtube_vod_ted/ko.vtt"
+   }
+  ],
+  "ku": [
+   {
+    "ext": "json3",
+    "url": "https://subs.example.invalid/youtube_vod_ted/ku.json3"
+   },
+   {
+    "ext": "srv1",
+    "url": "https://subs.example.invalid/youtube_vod_ted/ku.srv1"
+   },
+   {
+    "ext": "srv2",
+    "url": "https://subs.example.invalid/youtube_vod_ted/ku.srv2"
+   },
+   {
+    "ext": "srv3",
+    "url": "https://subs.example.invalid/youtube_vod_ted/ku.srv3"
+   },
+   {
+    "ext": "ttml",
+    "url": "https://subs.example.invalid/youtube_vod_ted/ku.ttml"
+   },
+   {
+    "ext": "srt",
+    "url": "https://subs.example.invalid/youtube_vod_ted/ku.srt"
+   },
+   {
+    "ext": "vtt",
+    "url": "https://subs.example.invalid/youtube_vod_ted/ku.vtt"
+   }
+  ],
+  "lv": [
+   {
+    "ext": "json3",
+    "url": "https://subs.example.invalid/youtube_vod_ted/lv.json3"
+   },
+   {
+    "ext": "srv1",
+    "url": "https://subs.example.invalid/youtube_vod_ted/lv.srv1"
+   },
+   {
+    "ext": "srv2",
+    "url": "https://subs.example.invalid/youtube_vod_ted/lv.srv2"
+   },
+   {
+    "ext": "srv3",
+    "url": "https://subs.example.invalid/youtube_vod_ted/lv.srv3"
+   },
+   {
+    "ext": "ttml",
+    "url": "https://subs.example.invalid/youtube_vod_ted/lv.ttml"
+   },
+   {
+    "ext": "srt",
+    "url": "https://subs.example.invalid/youtube_vod_ted/lv.srt"
+   },
+   {
+    "ext": "vtt",
+    "url": "https://subs.example.invalid/youtube_vod_ted/lv.vtt"
+   }
+  ],
+  "lt": [
+   {
+    "ext": "json3",
+    "url": "https://subs.example.invalid/youtube_vod_ted/lt.json3"
+   },
+   {
+    "ext": "srv1",
+    "url": "https://subs.example.invalid/youtube_vod_ted/lt.srv1"
+   },
+   {
+    "ext": "srv2",
+    "url": "https://subs.example.invalid/youtube_vod_ted/lt.srv2"
+   },
+   {
+    "ext": "srv3",
+    "url": "https://subs.example.invalid/youtube_vod_ted/lt.srv3"
+   },
+   {
+    "ext": "ttml",
+    "url": "https://subs.example.invalid/youtube_vod_ted/lt.ttml"
+   },
+   {
+    "ext": "srt",
+    "url": "https://subs.example.invalid/youtube_vod_ted/lt.srt"
+   },
+   {
+    "ext": "vtt",
+    "url": "https://subs.example.invalid/youtube_vod_ted/lt.vtt"
+   }
+  ],
+  "mr": [
+   {
+    "ext": "json3",
+    "url": "https://subs.example.invalid/youtube_vod_ted/mr.json3"
+   },
+   {
+    "ext": "srv1",
+    "url": "https://subs.example.invalid/youtube_vod_ted/mr.srv1"
+   },
+   {
+    "ext": "srv2",
+    "url": "https://subs.example.invalid/youtube_vod_ted/mr.srv2"
+   },
+   {
+    "ext": "srv3",
+    "url": "https://subs.example.invalid/youtube_vod_ted/mr.srv3"
+   },
+   {
+    "ext": "ttml",
+    "url": "https://subs.example.invalid/youtube_vod_ted/mr.ttml"
+   },
+   {
+    "ext": "srt",
+    "url": "https://subs.example.invalid/youtube_vod_ted/mr.srt"
+   },
+   {
+    "ext": "vtt",
+    "url": "https://subs.example.invalid/youtube_vod_ted/mr.vtt"
+   }
+  ],
+  "mn": [
+   {
+    "ext": "json3",
+    "url": "https://subs.example.invalid/youtube_vod_ted/mn.json3"
+   },
+   {
+    "ext": "srv1",
+    "url": "https://subs.example.invalid/youtube_vod_ted/mn.srv1"
+   },
+   {
+    "ext": "srv2",
+    "url": "https://subs.example.invalid/youtube_vod_ted/mn.srv2"
+   },
+   {
+    "ext": "srv3",
+    "url": "https://subs.example.invalid/youtube_vod_ted/mn.srv3"
+   },
+   {
+    "ext": "ttml",
+    "url": "https://subs.example.invalid/youtube_vod_ted/mn.ttml"
+   },
+   {
+    "ext": "srt",
+    "url": "https://subs.example.invalid/youtube_vod_ted/mn.srt"
+   },
+   {
+    "ext": "vtt",
+    "url": "https://subs.example.invalid/youtube_vod_ted/mn.vtt"
+   }
+  ],
+  "ne": [
+   {
+    "ext": "json3",
+    "url": "https://subs.example.invalid/youtube_vod_ted/ne.json3"
+   },
+   {
+    "ext": "srv1",
+    "url": "https://subs.example.invalid/youtube_vod_ted/ne.srv1"
+   },
+   {
+    "ext": "srv2",
+    "url": "https://subs.example.invalid/youtube_vod_ted/ne.srv2"
+   },
+   {
+    "ext": "srv3",
+    "url": "https://subs.example.invalid/youtube_vod_ted/ne.srv3"
+   },
+   {
+    "ext": "ttml",
+    "url": "https://subs.example.invalid/youtube_vod_ted/ne.ttml"
+   },
+   {
+    "ext": "srt",
+    "url": "https://subs.example.invalid/youtube_vod_ted/ne.srt"
+   },
+   {
+    "ext": "vtt",
+    "url": "https://subs.example.invalid/youtube_vod_ted/ne.vtt"
+   }
+  ],
+  "fa": [
+   {
+    "ext": "json3",
+    "url": "https://subs.example.invalid/youtube_vod_ted/fa.json3"
+   },
+   {
+    "ext": "srv1",
+    "url": "https://subs.example.invalid/youtube_vod_ted/fa.srv1"
+   },
+   {
+    "ext": "srv2",
+    "url": "https://subs.example.invalid/youtube_vod_ted/fa.srv2"
+   },
+   {
+    "ext": "srv3",
+    "url": "https://subs.example.invalid/youtube_vod_ted/fa.srv3"
+   },
+   {
+    "ext": "ttml",
+    "url": "https://subs.example.invalid/youtube_vod_ted/fa.ttml"
+   },
+   {
+    "ext": "srt",
+    "url": "https://subs.example.invalid/youtube_vod_ted/fa.srt"
+   },
+   {
+    "ext": "vtt",
+    "url": "https://subs.example.invalid/youtube_vod_ted/fa.vtt"
+   }
+  ],
+  "pl": [
+   {
+    "ext": "json3",
+    "url": "https://subs.example.invalid/youtube_vod_ted/pl.json3"
+   },
+   {
+    "ext": "srv1",
+    "url": "https://subs.example.invalid/youtube_vod_ted/pl.srv1"
+   },
+   {
+    "ext": "srv2",
+    "url": "https://subs.example.invalid/youtube_vod_ted/pl.srv2"
+   },
+   {
+    "ext": "srv3",
+    "url": "https://subs.example.invalid/youtube_vod_ted/pl.srv3"
+   },
+   {
+    "ext": "ttml",
+    "url": "https://subs.example.invalid/youtube_vod_ted/pl.ttml"
+   },
+   {
+    "ext": "srt",
+    "url": "https://subs.example.invalid/youtube_vod_ted/pl.srt"
+   },
+   {
+    "ext": "vtt",
+    "url": "https://subs.example.invalid/youtube_vod_ted/pl.vtt"
+   }
+  ],
+  "pt-BR": [
+   {
+    "ext": "json3",
+    "url": "https://subs.example.invalid/youtube_vod_ted/pt-BR.json3"
+   },
+   {
+    "ext": "srv1",
+    "url": "https://subs.example.invalid/youtube_vod_ted/pt-BR.srv1"
+   },
+   {
+    "ext": "srv2",
+    "url": "https://subs.example.invalid/youtube_vod_ted/pt-BR.srv2"
+   },
+   {
+    "ext": "srv3",
+    "url": "https://subs.example.invalid/youtube_vod_ted/pt-BR.srv3"
+   },
+   {
+    "ext": "ttml",
+    "url": "https://subs.example.invalid/youtube_vod_ted/pt-BR.ttml"
+   },
+   {
+    "ext": "srt",
+    "url": "https://subs.example.invalid/youtube_vod_ted/pt-BR.srt"
+   },
+   {
+    "ext": "vtt",
+    "url": "https://subs.example.invalid/youtube_vod_ted/pt-BR.vtt"
+   }
+  ],
+  "pt-PT": [
+   {
+    "ext": "json3",
+    "url": "https://subs.example.invalid/youtube_vod_ted/pt-PT.json3"
+   },
+   {
+    "ext": "srv1",
+    "url": "https://subs.example.invalid/youtube_vod_ted/pt-PT.srv1"
+   },
+   {
+    "ext": "srv2",
+    "url": "https://subs.example.invalid/youtube_vod_ted/pt-PT.srv2"
+   },
+   {
+    "ext": "srv3",
+    "url": "https://subs.example.invalid/youtube_vod_ted/pt-PT.srv3"
+   },
+   {
+    "ext": "ttml",
+    "url": "https://subs.example.invalid/youtube_vod_ted/pt-PT.ttml"
+   },
+   {
+    "ext": "srt",
+    "url": "https://subs.example.invalid/youtube_vod_ted/pt-PT.srt"
+   },
+   {
+    "ext": "vtt",
+    "url": "https://subs.example.invalid/youtube_vod_ted/pt-PT.vtt"
+   }
+  ],
+  "ro": [
+   {
+    "ext": "json3",
+    "url": "https://subs.example.invalid/youtube_vod_ted/ro.json3"
+   },
+   {
+    "ext": "srv1",
+    "url": "https://subs.example.invalid/youtube_vod_ted/ro.srv1"
+   },
+   {
+    "ext": "srv2",
+    "url": "https://subs.example.invalid/youtube_vod_ted/ro.srv2"
+   },
+   {
+    "ext": "srv3",
+    "url": "https://subs.example.invalid/youtube_vod_ted/ro.srv3"
+   },
+   {
+    "ext": "ttml",
+    "url": "https://subs.example.invalid/youtube_vod_ted/ro.ttml"
+   },
+   {
+    "ext": "srt",
+    "url": "https://subs.example.invalid/youtube_vod_ted/ro.srt"
+   },
+   {
+    "ext": "vtt",
+    "url": "https://subs.example.invalid/youtube_vod_ted/ro.vtt"
+   }
+  ],
+  "ru": [
+   {
+    "ext": "json3",
+    "url": "https://subs.example.invalid/youtube_vod_ted/ru.json3"
+   },
+   {
+    "ext": "srv1",
+    "url": "https://subs.example.invalid/youtube_vod_ted/ru.srv1"
+   },
+   {
+    "ext": "srv2",
+    "url": "https://subs.example.invalid/youtube_vod_ted/ru.srv2"
+   },
+   {
+    "ext": "srv3",
+    "url": "https://subs.example.invalid/youtube_vod_ted/ru.srv3"
+   },
+   {
+    "ext": "ttml",
+    "url": "https://subs.example.invalid/youtube_vod_ted/ru.ttml"
+   },
+   {
+    "ext": "srt",
+    "url": "https://subs.example.invalid/youtube_vod_ted/ru.srt"
+   },
+   {
+    "ext": "vtt",
+    "url": "https://subs.example.invalid/youtube_vod_ted/ru.vtt"
+   }
+  ],
+  "sr": [
+   {
+    "ext": "json3",
+    "url": "https://subs.example.invalid/youtube_vod_ted/sr.json3"
+   },
+   {
+    "ext": "srv1",
+    "url": "https://subs.example.invalid/youtube_vod_ted/sr.srv1"
+   },
+   {
+    "ext": "srv2",
+    "url": "https://subs.example.invalid/youtube_vod_ted/sr.srv2"
+   },
+   {
+    "ext": "srv3",
+    "url": "https://subs.example.invalid/youtube_vod_ted/sr.srv3"
+   },
+   {
+    "ext": "ttml",
+    "url": "https://subs.example.invalid/youtube_vod_ted/sr.ttml"
+   },
+   {
+    "ext": "srt",
+    "url": "https://subs.example.invalid/youtube_vod_ted/sr.srt"
+   },
+   {
+    "ext": "vtt",
+    "url": "https://subs.example.invalid/youtube_vod_ted/sr.vtt"
+   }
+  ],
+  "sl": [
+   {
+    "ext": "json3",
+    "url": "https://subs.example.invalid/youtube_vod_ted/sl.json3"
+   },
+   {
+    "ext": "srv1",
+    "url": "https://subs.example.invalid/youtube_vod_ted/sl.srv1"
+   },
+   {
+    "ext": "srv2",
+    "url": "https://subs.example.invalid/youtube_vod_ted/sl.srv2"
+   },
+   {
+    "ext": "srv3",
+    "url": "https://subs.example.invalid/youtube_vod_ted/sl.srv3"
+   },
+   {
+    "ext": "ttml",
+    "url": "https://subs.example.invalid/youtube_vod_ted/sl.ttml"
+   },
+   {
+    "ext": "srt",
+    "url": "https://subs.example.invalid/youtube_vod_ted/sl.srt"
+   },
+   {
+    "ext": "vtt",
+    "url": "https://subs.example.invalid/youtube_vod_ted/sl.vtt"
+   }
+  ],
+  "es": [
+   {
+    "ext": "json3",
+    "url": "https://subs.example.invalid/youtube_vod_ted/es.json3"
+   },
+   {
+    "ext": "srv1",
+    "url": "https://subs.example.invalid/youtube_vod_ted/es.srv1"
+   },
+   {
+    "ext": "srv2",
+    "url": "https://subs.example.invalid/youtube_vod_ted/es.srv2"
+   },
+   {
+    "ext": "srv3",
+    "url": "https://subs.example.invalid/youtube_vod_ted/es.srv3"
+   },
+   {
+    "ext": "ttml",
+    "url": "https://subs.example.invalid/youtube_vod_ted/es.ttml"
+   },
+   {
+    "ext": "srt",
+    "url": "https://subs.example.invalid/youtube_vod_ted/es.srt"
+   },
+   {
+    "ext": "vtt",
+    "url": "https://subs.example.invalid/youtube_vod_ted/es.vtt"
+   }
+  ],
+  "sv": [
+   {
+    "ext": "json3",
+    "url": "https://subs.example.invalid/youtube_vod_ted/sv.json3"
+   },
+   {
+    "ext": "srv1",
+    "url": "https://subs.example.invalid/youtube_vod_ted/sv.srv1"
+   },
+   {
+    "ext": "srv2",
+    "url": "https://subs.example.invalid/youtube_vod_ted/sv.srv2"
+   },
+   {
+    "ext": "srv3",
+    "url": "https://subs.example.invalid/youtube_vod_ted/sv.srv3"
+   },
+   {
+    "ext": "ttml",
+    "url": "https://subs.example.invalid/youtube_vod_ted/sv.ttml"
+   },
+   {
+    "ext": "srt",
+    "url": "https://subs.example.invalid/youtube_vod_ted/sv.srt"
+   },
+   {
+    "ext": "vtt",
+    "url": "https://subs.example.invalid/youtube_vod_ted/sv.vtt"
+   }
+  ],
+  "th": [
+   {
+    "ext": "json3",
+    "url": "https://subs.example.invalid/youtube_vod_ted/th.json3"
+   },
+   {
+    "ext": "srv1",
+    "url": "https://subs.example.invalid/youtube_vod_ted/th.srv1"
+   },
+   {
+    "ext": "srv2",
+    "url": "https://subs.example.invalid/youtube_vod_ted/th.srv2"
+   },
+   {
+    "ext": "srv3",
+    "url": "https://subs.example.invalid/youtube_vod_ted/th.srv3"
+   },
+   {
+    "ext": "ttml",
+    "url": "https://subs.example.invalid/youtube_vod_ted/th.ttml"
+   },
+   {
+    "ext": "srt",
+    "url": "https://subs.example.invalid/youtube_vod_ted/th.srt"
+   },
+   {
+    "ext": "vtt",
+    "url": "https://subs.example.invalid/youtube_vod_ted/th.vtt"
+   }
+  ],
+  "tr": [
+   {
+    "ext": "json3",
+    "url": "https://subs.example.invalid/youtube_vod_ted/tr.json3"
+   },
+   {
+    "ext": "srv1",
+    "url": "https://subs.example.invalid/youtube_vod_ted/tr.srv1"
+   },
+   {
+    "ext": "srv2",
+    "url": "https://subs.example.invalid/youtube_vod_ted/tr.srv2"
+   },
+   {
+    "ext": "srv3",
+    "url": "https://subs.example.invalid/youtube_vod_ted/tr.srv3"
+   },
+   {
+    "ext": "ttml",
+    "url": "https://subs.example.invalid/youtube_vod_ted/tr.ttml"
+   },
+   {
+    "ext": "srt",
+    "url": "https://subs.example.invalid/youtube_vod_ted/tr.srt"
+   },
+   {
+    "ext": "vtt",
+    "url": "https://subs.example.invalid/youtube_vod_ted/tr.vtt"
+   }
+  ],
+  "uk": [
+   {
+    "ext": "json3",
+    "url": "https://subs.example.invalid/youtube_vod_ted/uk.json3"
+   },
+   {
+    "ext": "srv1",
+    "url": "https://subs.example.invalid/youtube_vod_ted/uk.srv1"
+   },
+   {
+    "ext": "srv2",
+    "url": "https://subs.example.invalid/youtube_vod_ted/uk.srv2"
+   },
+   {
+    "ext": "srv3",
+    "url": "https://subs.example.invalid/youtube_vod_ted/uk.srv3"
+   },
+   {
+    "ext": "ttml",
+    "url": "https://subs.example.invalid/youtube_vod_ted/uk.ttml"
+   },
+   {
+    "ext": "srt",
+    "url": "https://subs.example.invalid/youtube_vod_ted/uk.srt"
+   },
+   {
+    "ext": "vtt",
+    "url": "https://subs.example.invalid/youtube_vod_ted/uk.vtt"
+   }
+  ],
+  "ur": [
+   {
+    "ext": "json3",
+    "url": "https://subs.example.invalid/youtube_vod_ted/ur.json3"
+   },
+   {
+    "ext": "srv1",
+    "url": "https://subs.example.invalid/youtube_vod_ted/ur.srv1"
+   },
+   {
+    "ext": "srv2",
+    "url": "https://subs.example.invalid/youtube_vod_ted/ur.srv2"
+   },
+   {
+    "ext": "srv3",
+    "url": "https://subs.example.invalid/youtube_vod_ted/ur.srv3"
+   },
+   {
+    "ext": "ttml",
+    "url": "https://subs.example.invalid/youtube_vod_ted/ur.ttml"
+   },
+   {
+    "ext": "srt",
+    "url": "https://subs.example.invalid/youtube_vod_ted/ur.srt"
+   },
+   {
+    "ext": "vtt",
+    "url": "https://subs.example.invalid/youtube_vod_ted/ur.vtt"
+   }
+  ],
+  "uz": [
+   {
+    "ext": "json3",
+    "url": "https://subs.example.invalid/youtube_vod_ted/uz.json3"
+   },
+   {
+    "ext": "srv1",
+    "url": "https://subs.example.invalid/youtube_vod_ted/uz.srv1"
+   },
+   {
+    "ext": "srv2",
+    "url": "https://subs.example.invalid/youtube_vod_ted/uz.srv2"
+   },
+   {
+    "ext": "srv3",
+    "url": "https://subs.example.invalid/youtube_vod_ted/uz.srv3"
+   },
+   {
+    "ext": "ttml",
+    "url": "https://subs.example.invalid/youtube_vod_ted/uz.ttml"
+   },
+   {
+    "ext": "srt",
+    "url": "https://subs.example.invalid/youtube_vod_ted/uz.srt"
+   },
+   {
+    "ext": "vtt",
+    "url": "https://subs.example.invalid/youtube_vod_ted/uz.vtt"
+   }
+  ],
+  "vi": [
+   {
+    "ext": "json3",
+    "url": "https://subs.example.invalid/youtube_vod_ted/vi.json3"
+   },
+   {
+    "ext": "srv1",
+    "url": "https://subs.example.invalid/youtube_vod_ted/vi.srv1"
+   },
+   {
+    "ext": "srv2",
+    "url": "https://subs.example.invalid/youtube_vod_ted/vi.srv2"
+   },
+   {
+    "ext": "srv3",
+    "url": "https://subs.example.invalid/youtube_vod_ted/vi.srv3"
+   },
+   {
+    "ext": "ttml",
+    "url": "https://subs.example.invalid/youtube_vod_ted/vi.ttml"
+   },
+   {
+    "ext": "srt",
+    "url": "https://subs.example.invalid/youtube_vod_ted/vi.srt"
+   },
+   {
+    "ext": "vtt",
+    "url": "https://subs.example.invalid/youtube_vod_ted/vi.vtt"
+   }
+  ]
+ },
+ "automatic_captions": {
+  "en": [
+   {
+    "ext": "vtt",
+    "url": "https://subs.example.invalid/youtube_vod_ted/en.vtt"
+   },
+   {
+    "ext": "json3",
+    "url": "https://subs.example.invalid/youtube_vod_ted/en.json3"
+   },
+   {
+    "ext": "srv1",
+    "url": "https://subs.example.invalid/youtube_vod_ted/en.srv1"
+   },
+   {
+    "ext": "srv2",
+    "url": "https://subs.example.invalid/youtube_vod_ted/en.srv2"
+   },
+   {
+    "ext": "srv3",
+    "url": "https://subs.example.invalid/youtube_vod_ted/en.srv3"
+   },
+   {
+    "ext": "ttml",
+    "url": "https://subs.example.invalid/youtube_vod_ted/en.ttml"
+   },
+   {
+    "ext": "srt",
+    "url": "https://subs.example.invalid/youtube_vod_ted/en.srt"
+   },
+   {
+    "ext": "vtt",
+    "url": "https://subs.example.invalid/youtube_vod_ted/en.vtt"
+   }
+  ],
+  "fr": [
+   {
+    "ext": "vtt",
+    "url": "https://subs.example.invalid/youtube_vod_ted/fr.vtt"
+   },
+   {
+    "ext": "json3",
+    "url": "https://subs.example.invalid/youtube_vod_ted/fr.json3"
+   },
+   {
+    "ext": "srv1",
+    "url": "https://subs.example.invalid/youtube_vod_ted/fr.srv1"
+   },
+   {
+    "ext": "srv2",
+    "url": "https://subs.example.invalid/youtube_vod_ted/fr.srv2"
+   },
+   {
+    "ext": "srv3",
+    "url": "https://subs.example.invalid/youtube_vod_ted/fr.srv3"
+   },
+   {
+    "ext": "ttml",
+    "url": "https://subs.example.invalid/youtube_vod_ted/fr.ttml"
+   },
+   {
+    "ext": "srt",
+    "url": "https://subs.example.invalid/youtube_vod_ted/fr.srt"
+   },
+   {
+    "ext": "vtt",
+    "url": "https://subs.example.invalid/youtube_vod_ted/fr.vtt"
+   }
+  ],
+  "zh-Hans": [
+   {
+    "ext": "json3",
+    "url": "https://subs.example.invalid/youtube_vod_ted/zh-Hans.json3"
+   },
+   {
+    "ext": "srv1",
+    "url": "https://subs.example.invalid/youtube_vod_ted/zh-Hans.srv1"
+   },
+   {
+    "ext": "srv2",
+    "url": "https://subs.example.invalid/youtube_vod_ted/zh-Hans.srv2"
+   },
+   {
+    "ext": "srv3",
+    "url": "https://subs.example.invalid/youtube_vod_ted/zh-Hans.srv3"
+   },
+   {
+    "ext": "ttml",
+    "url": "https://subs.example.invalid/youtube_vod_ted/zh-Hans.ttml"
+   },
+   {
+    "ext": "srt",
+    "url": "https://subs.example.invalid/youtube_vod_ted/zh-Hans.srt"
+   },
+   {
+    "ext": "vtt",
+    "url": "https://subs.example.invalid/youtube_vod_ted/zh-Hans.vtt"
+   }
+  ],
+  "en-orig": [
+   {
+    "ext": "json3",
+    "url": "https://subs.example.invalid/youtube_vod_ted/en-orig.json3"
+   },
+   {
+    "ext": "srv1",
+    "url": "https://subs.example.invalid/youtube_vod_ted/en-orig.srv1"
+   },
+   {
+    "ext": "srv2",
+    "url": "https://subs.example.invalid/youtube_vod_ted/en-orig.srv2"
+   },
+   {
+    "ext": "srv3",
+    "url": "https://subs.example.invalid/youtube_vod_ted/en-orig.srv3"
+   },
+   {
+    "ext": "ttml",
+    "url": "https://subs.example.invalid/youtube_vod_ted/en-orig.ttml"
+   },
+   {
+    "ext": "srt",
+    "url": "https://subs.example.invalid/youtube_vod_ted/en-orig.srt"
+   },
+   {
+    "ext": "vtt",
+    "url": "https://subs.example.invalid/youtube_vod_ted/en-orig.vtt"
+   }
+  ]
+ }
+}

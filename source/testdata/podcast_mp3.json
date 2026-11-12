@@ -1,0 +1,29 @@
+{
+ "_type": "video",
+ "id": "lex_ai_preston_stewart_michael_kofman",
+ "title": "lex_ai_preston_stewart_michael_kofman",
+ "webpage_url": "https://content.blubrry.com/takeituneasy/lex_ai_preston_stewart_michael_kofman.mp3",
+ "original_url": "https://media.blubrry.com/takeituneasy/ins.blubrry.com/takeituneasy/lex_ai_preston_stewart_michael_kofman.mp3",
+ "extractor": "generic",
+ "protocol": "https",
+ "acodec": "mp3",
+ "vcodec": "none",
+ "format_id": "mpeg",
+ "url": "https://media.example.invalid/podcast_mp3/selected",
+ "http_headers": {
+  "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36"
+ },
+ "formats": [
+  {
+   "format_id": "mpeg",
+   "protocol": "https",
+   "acodec": "mp3",
+   "vcodec": "none",
+   "url": "https://media.example.invalid/podcast_mp3/mpeg",
+   "http_headers": {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36"
+   }
+  }
+ ],
+ "subtitles": {}
+}
