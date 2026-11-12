@@ -1,0 +1,119 @@
+{
+ "_type": "video",
+ "id": "gCNeDWCI0vo",
+ "title": "🔴 Al Jazeera English | Live 2026-11-12 20:17",
+ "webpage_url": "https://www.youtube.com/watch?v=gCNeDWCI0vo",
+ "original_url": "https://www.youtube.com/@aljazeeraenglish/live",
+ "extractor": "youtube",
+ "is_live": true,
+ "live_status": "is_live",
+ "language": null,
+ "protocol": "m3u8_native",
+ "vcodec": "none",
+ "format_id": "234",
+ "url": "https://media.example.invalid/youtube_live/selected",
+ "http_headers": {
+  "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36"
+ },
+ "formats": [
+  {
+   "format_id": "233",
+   "protocol": "m3u8_native",
+   "vcodec": "none",
+   "url": "https://media.example.invalid/youtube_live/233",
+   "http_headers": {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36"
+   }
+  },
+  {
+   "format_id": "234",
+   "protocol": "m3u8_native",
+   "vcodec": "none",
+   "url": "https://media.example.invalid/youtube_live/234",
+   "http_headers": {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36"
+   }
+  },
+  {
+   "format_id": "269",
+   "protocol": "m3u8_native",
+   "acodec": "none",
+   "vcodec": "avc1.42C00B",
+   "width": 256,
+   "height": 144,
+   "url": "https://media.example.invalid/youtube_live/269",
+   "http_headers": {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36"
+   }
+  },
+  {
+   "format_id": "229",
+   "protocol": "m3u8_native",
+   "acodec": "none",
+   "vcodec": "avc1.4D4015",
+   "width": 426,
+   "height": 240,
+   "url": "https://media.example.invalid/youtube_live/229",
+   "http_headers": {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36"
+   }
+  },
+  {
+   "format_id": "230",
+   "protocol": "m3u8_native",
+   "acodec": "none",
+   "vcodec": "avc1.4D401E",
+   "width": 640,
+   "height": 360,
+   "url": "https://media.example.invalid/youtube_live/230",
+   "http_headers": {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36"
+   }
+  },
+  {
+   "format_id": "231",
+   "protocol": "m3u8_native",
+   "acodec": "none",
+   "vcodec": "avc1.4D401F",
+   "width": 854,
+   "height": 480,
+   "url": "https://media.example.invalid/youtube_live/231",
+   "http_headers": {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36"
+   }
+  },
+  {
+   "format_id": "232",
+   "protocol": "m3u8_native",
+   "acodec": "none",
+   "vcodec": "avc1.4D401F",
+   "width": 1280,
+   "height": 720,
+   "url": "https://media.example.invalid/youtube_live/232",
+   "http_headers": {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36"
+   }
+  },
+  {
+   "format_id": "270",
+   "protocol": "m3u8_native",
+   "acodec": "none",
+   "vcodec": "avc1.640028",
+   "width": 1920,
+   "height": 1080,
+   "url": "https://media.example.invalid/youtube_live/270",
+   "http_headers": {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36"
+   }
+  }
+ ],
+ "subtitles": {
+  "live_chat": [
+   {
+    "ext": "json",
+    "url": "https://subs.example.invalid/youtube_live/live_chat.json"
+   }
+  ]
+ },
+ "automatic_captions": {}
+}
