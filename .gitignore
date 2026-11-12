@@ -1,0 +1,18 @@
+# Build output
+/bin/
+/dist/
+/voxbridge
+
+# Go
+*.test
+*.out
+coverage.*
+
+# Local work and secrets
+.env
+.env.*
+config.json
+*.wav
+*.pcm
+/tmp/
+.DS_Store
