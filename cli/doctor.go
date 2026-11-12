@@ -16,17 +16,26 @@ import (
 	"github.com/yangwenmai/voxbridge/provider/registry"
 )
 
+// Status marks are emoji, two columns wide in a terminal; detailIndent
+// lines continuation text up under the text after a mark.
+const (
+	markOK       = "✅"
+	markFail     = "❌"
+	markOff      = "⚪"
+	detailIndent = "     "
+)
+
 func doctor(ctx context.Context, stdout, stderr io.Writer) int {
 	ok := true
 	fmt.Fprintln(stdout, "工具")
 	for _, t := range []struct{ name, flag string }{{"ffmpeg", "-version"}, {"ffprobe", "-version"}, {"yt-dlp", "--version"}} {
 		if err := media.Require(t.name); err != nil {
 			ok = false
-			fmt.Fprintf(stdout, "  ✗ %s  %v\n", t.name, err)
+			fmt.Fprintf(stdout, "  %s %s  %v\n", markFail, t.name, err)
 			continue
 		}
 		out, _ := media.Run(ctx, t.name, t.flag)
-		fmt.Fprintf(stdout, "  ✓ %s  %s\n", t.name, firstLine(string(out)))
+		fmt.Fprintf(stdout, "  %s %s  %s\n", markOK, t.name, firstLine(string(out)))
 	}
 
 	path, err := config.Path()
@@ -63,7 +72,7 @@ func doctor(ctx context.Context, stdout, stderr io.Writer) int {
 		entry, has := keys[p.ID()]
 		fmt.Fprintf(stdout, "\n%s\n", p.Name())
 		if !has {
-			fmt.Fprintf(stdout, "  - 未配置。设置环境变量 %s，或写进 %s\n", p.KeyEnv(), path)
+			fmt.Fprintf(stdout, "  %s 未配置。设置环境变量 %s，或写进 %s\n", markOff, p.KeyEnv(), path)
 			continue
 		}
 		fmt.Fprintf(stdout, "  Key 来自 %s\n", describeOrigin(entry))
@@ -72,16 +81,16 @@ func doctor(ctx context.Context, stdout, stderr io.Writer) int {
 			label := capabilityLabel(r.Capability)
 			if r.OK {
 				usable++
-				fmt.Fprintf(stdout, "  ✓ %s（%s）  %s%s\n", label, r.Model, r.Scope, costNote(r.Cost))
+				fmt.Fprintf(stdout, "  %s %s（%s）  %s%s\n", markOK, label, r.Model, r.Scope, costNote(r.Cost))
 				if s, found := caps.Service(r.Capability); found {
-					fmt.Fprintf(stdout, "      %s\n", describeService(s))
+					fmt.Fprintf(stdout, detailIndent+"%s\n", describeService(s))
 				}
 				continue
 			}
 			ok = false
-			fmt.Fprintf(stdout, "  ✗ %s（%s）  %s\n", label, r.Model, describeErr(r.Err))
+			fmt.Fprintf(stdout, "  %s %s（%s）  %s\n", markFail, label, r.Model, describeErr(r.Err))
 			if r.Scope != "" {
-				fmt.Fprintf(stdout, "      %s\n", r.Scope)
+				fmt.Fprintf(stdout, detailIndent+"%s\n", r.Scope)
 			}
 		}
 	}

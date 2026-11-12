@@ -38,7 +38,7 @@ func headers(key, resource string) http.Header {
 }
 
 func checkMT(ctx context.Context, key string) core.CheckResult {
-	r := core.CheckResult{Capability: core.CapTranslate, Model: mtRes, Cost: "约 10 token"}
+	r := core.CheckResult{Capability: core.CapTranslate, Model: mtRes, Cost: "10 token"}
 	body, _ := json.Marshal(map[string]any{"target_language": "zh", "text_list": []string{"Hello."}})
 	reply, err := wire.Do(ctx, http.MethodPost, mtURL, headers(key, mtRes), body)
 	if err != nil {
