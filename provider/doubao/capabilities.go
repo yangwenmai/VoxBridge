@@ -73,6 +73,18 @@ var capabilities = core.Capabilities{
 			},
 		},
 		{
+			Capability: core.CapRecognize,
+			Model:      asrRes,
+			// Without a language hint the recognizer handles Chinese, English
+			// and Chinese dialects; VoxBridge sends no hint.
+			Languages:       []core.LangRule{{From: langs("zh", "en"), To: langs("zh", "en")}},
+			InputSampleRate: 16000,
+			Pricing: core.Pricing{
+				Unit: "hour", Currency: "CNY", PerHour: 4.5,
+				Basis: "大模型录音文件识别极速版 4.5 元/小时",
+			},
+		},
+		{
 			Capability: core.CapTranslate,
 			Model:      mtRes,
 			Languages:  []core.LangRule{{From: append([]core.Lang{core.AnyLang}, mtLangs...), To: mtLangs}},

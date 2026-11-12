@@ -1,5 +1,5 @@
-// Package wire sends single requests for provider checks. It never retries
-// and never puts the key into errors.
+// Package wire sends single provider requests. It never retries and never
+// puts the key into errors.
 package wire
 
 import (
@@ -19,10 +19,23 @@ type Reply struct {
 	Body   []byte
 }
 
-var client = &http.Client{Timeout: 30 * time.Second}
+var (
+	client = &http.Client{Timeout: 30 * time.Second}
+	// slow allows for uploading and recognizing up to 100 MB of audio.
+	slow = &http.Client{Timeout: 10 * time.Minute}
+)
 
 // Do sends one request. err is only set when no HTTP response arrived.
 func Do(ctx context.Context, method, url string, header http.Header, body []byte) (Reply, error) {
+	return send(ctx, client, method, url, header, body)
+}
+
+// DoSlow is Do for requests that carry or produce a lot of audio.
+func DoSlow(ctx context.Context, method, url string, header http.Header, body []byte) (Reply, error) {
+	return send(ctx, slow, method, url, header, body)
+}
+
+func send(ctx context.Context, client *http.Client, method, url string, header http.Header, body []byte) (Reply, error) {
 	req, err := http.NewRequestWithContext(ctx, method, url, bytes.NewReader(body))
 	if err != nil {
 		return Reply{}, err
@@ -33,7 +46,7 @@ func Do(ctx context.Context, method, url string, header http.Header, body []byte
 		return Reply{}, err
 	}
 	defer resp.Body.Close()
-	data, err := io.ReadAll(io.LimitReader(resp.Body, 4<<20))
+	data, err := io.ReadAll(io.LimitReader(resp.Body, 64<<20))
 	return Reply{Status: resp.StatusCode, Header: resp.Header, Body: data}, err
 }
 

@@ -1,0 +1,1 @@
+{"code":20000000,"data":{"translation_list":[{"detected_source_language":"en","translation":"谢谢。","usage":{"completion_tokens":8,"prompt_tokens":21,"total_tokens":29}},{"detected_source_language":"en","translation":"我布置了家庭作业。","usage":{"completion_tokens":12,"prompt_tokens":24,"total_tokens":36}}]},"message":"ok"}
