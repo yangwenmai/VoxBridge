@@ -97,14 +97,16 @@ func openLive(ctx context.Context, h http.Header) error {
 		return err
 	}
 	defer conn.Close(websocket.StatusNormalClosure, "")
+	// Transcription configs belong on setup; translationConfig belongs in
+	// generationConfig (BidiGenerateContentSetup in the Live API reference).
 	setup, _ := json.Marshal(map[string]any{"setup": map[string]any{
 		"model": "models/" + Model,
 		"generationConfig": map[string]any{
-			"responseModalities":       []string{"AUDIO"},
-			"inputAudioTranscription":  map[string]any{},
-			"outputAudioTranscription": map[string]any{},
-			"translationConfig":        map[string]any{"targetLanguageCode": "zh-Hans"},
+			"responseModalities": []string{"AUDIO"},
+			"translationConfig":  map[string]any{"targetLanguageCode": "zh-Hans"},
 		},
+		"inputAudioTranscription":  map[string]any{},
+		"outputAudioTranscription": map[string]any{},
 	}})
 	if err := conn.Write(ctx, websocket.MessageText, setup); err != nil {
 		return err

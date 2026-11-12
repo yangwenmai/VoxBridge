@@ -66,7 +66,7 @@
 
 - 文档：[Live translate](https://aistudio.google.com/docs/live-api/live-translate)、[模型页](https://aistudio.google.com/docs/models/gemini-3.5-live-translate-preview)、[价格](https://ai.google.dev/gemini-api/docs/pricing)
 - 模型名 `gemini-3.5-live-translate-preview`，与规格一致。公开预览版。
-- 连接：Live API WebSocket `wss://generativelanguage.googleapis.com/ws/google.ai.generativelanguage.v1beta.GenerativeService.BidiGenerateContent`，setup 里 `generationConfig.translationConfig.targetLanguageCode` 设目标语言，`inputAudioTranscription` / `outputAudioTranscription` 打开原文和译文字幕。不需要指定源语言。
+- 连接：Live API WebSocket `wss://generativelanguage.googleapis.com/ws/google.ai.generativelanguage.v1beta.GenerativeService.BidiGenerateContent`，setup 里 `generationConfig.translationConfig.targetLanguageCode` 设目标语言，`inputAudioTranscription` / `outputAudioTranscription` 打开原文和译文字幕。不需要指定源语言。**⚠ Live translate 指南的示例把两个 transcription 字段写在 `generationConfig` 里，服务端会拒绝（`Unknown name "inputAudioTranscription" at 'setup.generation_config'`）**；按 [API 参考](https://ai.google.dev/api/live#BidiGenerateContentSetup) 它们直接放在 `setup` 下。
 - 输入 16 kHz 16 bit 单声道 PCM，建议 100 ms 一块；输出 24 kHz 16 bit PCM。与规格里 AIE live-translate 的推断一致。
 - 只收音频，不支持文字输入、工具和指令。不能选音色，模型会复刻讲者声音，官方说长停顿后声音可能漂移、性别判断可能出错。
 - 语言：官方表列出 78 种语言（79 个代码，挪威语有 `no`、`nb` 两个），中文是 `zh-Hans` / `zh-Hant`，不是 `zh`。规格说「70 多种」，一致。
