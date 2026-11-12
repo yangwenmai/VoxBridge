@@ -43,6 +43,7 @@
 - `source_language` 可省略，自动检测。`detected_source_language` **只在没传 `source_language` 时返回**。
 - 支持 32 种语言互译：zh、zh-Hant、en、ja、ko、fr、de、es、pt、ru、ar、it、nl、pl、ro、sv、da、nb、fi、hu、cs、hr、el、he、tr、uk、th、vi、id、ms、tl、hi。
 - 超长返回 45000130。
+- 用量在每条译文里：`translation_list[].usage.{prompt_tokens,completion_tokens}`（2026-11-12 实测，顶层没有 `usage`）。录下的响应在 `provider/doubao/testdata/mt_ok.json`。
 - 价格：输入 1.8 元、输出 5.4 元每百万 token。一小时英文约一万多 token，不到 0.1 元。
 
 ### 语音合成 2.0
@@ -52,6 +53,16 @@
 - 规格列的 6 个音色都在官方 2.0 音色表里：Vivi 2.0、云舟 2.0、小何 2.0、小天 2.0、刘飞 2.0、魅力苏菲 2.0。
 - 价格：3 元每万字符（资源包最低 2.1 元）。一小时英文译成中文约 1.5 万到 1.8 万字，约 4.5 到 5.4 元。加上机器翻译，和规格「一小时 5 到 6 元」一致；同传约 21 元，约为配音的四倍，也和规格一致（都是估算）。
 
+### 录音文件识别（预先配音没有平台字幕时用）
+
+- 文档：[大模型录音文件极速版识别](https://www.volcengine.com/docs/6561/1631584)
+- `POST /api/v3/auc/bigmodel/recognize/flash`，resource `volc.bigasr.auc_turbo`，请求头另加 `X-Api-Sequence: -1`。一次请求直接返回结果，音频 base64 放在请求体里，单次不超过 2 小时、100 MB。VoxBridge 先用 ffmpeg 转成 16 kHz 单声道 32 kbps mp3，超过 100 分钟分段发。
+- 状态码在**响应头** `X-Api-Status-Code`（20000000 成功），消息在 `X-Api-Message`。
+- 选它而不是标准版（`volc.seedasr.auc`），因为标准版要一个公网可访问的音频 URL，提交后再轮询；本机跑的 CLI 没有这个 URL。
+- 说话人分离（`enable_speaker_info`）只在不指定语言或指定 zh-CN 时生效。**未验证**：返回里说话人标签放在哪个字段文档没写，VoxBridge 读 `utterances[].speaker` 和 `utterances[].additions.speaker`。
+- 价格：4.5 元每小时。
+- **⚠ 要单独开通**。2026-11-12 用 Mai 的 Key 实测返回 HTTP 403、`45000030`、`[resource_id=volc.bigasr.auc_turbo] requested resource not granted`，VoxBridge 归为「没开通」，不重试。
+
 ### 实测的错误响应（2026-11-12，用错误的 Key）
 
 | 服务 | HTTP | 响应体 |
@@ -59,6 +70,15 @@
 | 机器翻译 | 500 | `{"code":55000000,"message":"Invalid X-Api-Key"}` |
 | 语音合成 2.0 | 401 | `{"header":{"code":45000010,"message":"Invalid X-Api-Key",...}}` |
 | 同传 WebSocket 握手 | 401 | `{"error":"Invalid X-Api-Key"}` |
+
+### 预先配音实测（2026-11-12，有人工英文字幕的 TED 视频）
+
+| 视频 | 时长 | 句子 | 机器翻译 | 语音合成 2.0 | 估算费用 |
+| --- | --- | --- | --- | --- | --- |
+| Grit（H14bBuluwB8） | 6:13 | 56（1 句跳过） | 4 次请求 | 55 次请求，1596 字符 | 约 0.50 元 |
+| 10 mindful minutes（qzR62JJCMBQ），中途 Ctrl-C 后续跑 | 9:24 | 95（1 句跳过） | 6 次请求（续跑 0 次） | 33 + 63 次请求，2717 字符 | 约 0.84 元 |
+
+合成字数折算约每小时 1.7 万字、5.2 元，和上面的估算一致。估算按公开价，没对账单。
 
 **⚠ 与规格不同**：规格说「HTTP 500 加 55000000」表示服务没开通。实测 Key 本身错了也是 500 加 55000000，要看 message 区分。VoxBridge 先判 `Invalid X-Api-Key`（Key 错），再判 `mismatched` 等词（没开通）。三种响应都带 `X-Tt-Logid`。
 

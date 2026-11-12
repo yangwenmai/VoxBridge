@@ -16,3 +16,4 @@ config.json
 *.pcm
 /tmp/
 .DS_Store
+voxbridge-dubs/
