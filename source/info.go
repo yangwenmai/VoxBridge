@@ -107,7 +107,12 @@ func (i info) video() *core.VideoInput {
 	return &core.VideoInput{URL: best.URL, Headers: best.HTTPHeaders, Width: best.Width, Height: best.Height}
 }
 
-var subtitleFormats = []string{"vtt", "srt", "json3", "ttml", "srv3"}
+// Formats the transcript package parses. YouTube's auto captions in vtt
+// repeat each line as it scrolls, so auto tracks are only read as json3.
+var (
+	manualFormats = []string{"vtt", "srt", "json3"}
+	autoFormats   = []string{"json3"}
+)
 
 // transcript prefers captions written for the spoken language, then the
 // platform's recognition of the original audio. Machine-translated
@@ -149,8 +154,12 @@ func pickTrack(tracks map[string][]subtitle, lang string, kind core.TranscriptKi
 			candidates = real
 		}
 	}
+	formats := manualFormats
+	if auto {
+		formats = autoFormats
+	}
 	for _, key := range candidates {
-		for _, ext := range subtitleFormats {
+		for _, ext := range formats {
 			for _, s := range tracks[key] {
 				if s.Ext == ext && s.URL != "" {
 					tag := strings.TrimSuffix(key, "-orig")
