@@ -1,6 +1,7 @@
 package cli
 
 import (
+	"bufio"
 	"context"
 	"crypto/sha1"
 	"encoding/hex"
@@ -44,7 +45,7 @@ func dubCmd(ctx context.Context, args []string, stdout, stderr io.Writer) int {
 		fmt.Fprintln(stderr, "--original-volume 要在 0 到 1 之间")
 		return 2
 	}
-	if err := media.Require("ffmpeg", "ffprobe", "yt-dlp"); err != nil {
+	if err := requireTools(); err != nil {
 		fmt.Fprintln(stderr, err)
 		return 1
 	}
@@ -61,7 +62,7 @@ func dubCmd(ctx context.Context, args []string, stdout, stderr io.Writer) int {
 	}
 
 	fmt.Fprintln(stdout, "解析链接…")
-	src, err := source.Resolve(ctx, url)
+	src, err := resolve(ctx, url)
 	if err != nil {
 		var se *source.Error
 		if errors.As(err, &se) {
@@ -87,19 +88,41 @@ func dubCmd(ctx context.Context, args []string, stdout, stderr io.Writer) int {
 		fmt.Fprintln(stderr, why)
 		return 1
 	}
-	dubber := p.(core.Dubber)
-	d := dubber.Dubbing(keys[p.ID()].Key.Reveal())
-	if !needASR {
-		d.Recognizer = nil
-	}
-	fmt.Fprintf(stdout, "用 %s：%s\n", p.Name(), strings.Join(svc.names, " + "))
-	fmt.Fprintf(stdout, "预计费用约 %.1f 元（按公开价估算，记在你自己的账上；已做完的部分不会再计费）\n", svc.perHour*float64(src.DurationMs)/3600000)
-
 	dir := *out
 	if dir == "" {
 		sum := sha1.Sum([]byte(src.URL))
 		dir = filepath.Join("voxbridge-dubs", hex.EncodeToString(sum[:])[:10])
 	}
+	hours := float64(src.DurationMs) / 3600000
+
+	// Remote recognition uploads the whole episode and bills by the hour,
+	// so it only runs on --asr or an explicit yes. A directory that already
+	// holds a manifest has its sentences and needs no recognition.
+	_, statErr := os.Stat(filepath.Join(dir, "manifest.json"))
+	if src.Transcript == nil && !*asr && statErr != nil {
+		asrCost := svc.asrPerHour * hours
+		if !interactive() {
+			fmt.Fprintf(stderr, "这个链接没有平台字幕，配音要先用%s的语音识别（%s）把整集音频上传识别，约 %.2f 元。\n"+
+				"为避免意外扣费，不会自动识别。确认要识别，请加 --asr 重跑：\n  voxbridge dub %q --asr\n",
+				p.Name(), svc.asrModel, asrCost, url)
+			return 1
+		}
+		fmt.Fprintf(stdout, "\n这个链接没有平台字幕，配音要先把整集音频上传做语音识别。\n"+
+			"  时长  %s\n  识别  %s·语音识别（%s）\n  预计  识别约 %.2f 元，整集合计约 %.2f 元（按公开价估算，记在你自己的账上）\n"+
+			"要上传音频做语音识别吗？[y/N] ", clock(src.DurationMs), p.Name(), svc.asrModel, asrCost, svc.perHour*hours)
+		if !confirmed(stdin) {
+			fmt.Fprintln(stdout, "已取消，没有发出任何请求。")
+			return 1
+		}
+	}
+
+	dubber := p.(core.Dubber)
+	d := dubbingFor(dubber, keys[p.ID()].Key.Reveal())
+	if !needASR {
+		d.Recognizer = nil
+	}
+	fmt.Fprintf(stdout, "用 %s：%s\n", p.Name(), strings.Join(svc.names, " + "))
+	fmt.Fprintf(stdout, "预计费用约 %.1f 元（按公开价估算，记在你自己的账上；已做完的部分不会再计费）\n", svc.perHour*hours)
 	fmt.Fprintf(stdout, "工作目录 %s\n", dir)
 
 	providers := core.DubProviders{Translator: p.ID(), Synthesizer: p.ID()}
@@ -127,9 +150,30 @@ func dubCmd(ctx context.Context, args []string, stdout, stderr io.Writer) int {
 }
 
 type dubServices struct {
-	names   []string
-	voices  []string
-	perHour float64
+	names      []string
+	voices     []string
+	perHour    float64
+	asrModel   string
+	asrPerHour float64
+}
+
+// Replaced in tests.
+var (
+	resolve                = source.Resolve
+	requireTools           = func() error { return media.Require("ffmpeg", "ffprobe", "yt-dlp") }
+	dubbingFor             = func(d core.Dubber, key string) core.Dubbing { return d.Dubbing(key) }
+	stdin        io.Reader = os.Stdin
+	interactive            = func() bool { return isTerminal(os.Stdin) }
+)
+
+// confirmed reads one answer; only y or yes counts, so Enter means no.
+func confirmed(r io.Reader) bool {
+	line, _ := bufio.NewReader(r).ReadString('\n')
+	switch strings.ToLower(strings.TrimSpace(line)) {
+	case "y", "yes":
+		return true
+	}
+	return false
 }
 
 // pickDubber returns the first configured provider whose capability table
@@ -159,6 +203,7 @@ func pickDubber(keys map[string]config.Entry, from core.Lang, needASR bool) (cor
 			switch c {
 			case core.CapRecognize:
 				ok = from == "" || svc.Supports(baseLang(from), baseLang(from))
+				s.asrModel, s.asrPerHour = svc.Model, svc.Pricing.PerHour
 			case core.CapTranslate:
 				ok = from == "" || svc.Supports(from, dubTarget)
 			case core.CapSynthesize:
