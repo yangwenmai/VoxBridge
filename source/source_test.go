@@ -70,12 +70,12 @@ func TestYouTubeVideoIsVODWithManualSubtitles(t *testing.T) {
 func TestAutoCaptionsOnlyInSpokenLanguage(t *testing.T) {
 	i := info{Language: "en", AutomaticCaptions: map[string][]subtitle{
 		"fr":      {{Ext: "vtt", URL: "u-fr"}},
-		"en-orig": {{Ext: "json3", URL: "u-orig-json"}, {Ext: "vtt", URL: "u-orig"}},
+		"en-orig": {{Ext: "vtt", URL: "u-orig-vtt"}, {Ext: "json3", URL: "u-orig"}},
 		"en":      {{Ext: "vtt", URL: "u-en"}},
 	}}
 	tr := i.transcript()
 	if tr == nil || tr.URL != "u-orig" || tr.Kind != core.TranscriptAuto || tr.Language != "en" {
-		t.Fatalf("transcript = %+v, want the original-language vtt", tr)
+		t.Fatalf("transcript = %+v, want the original-language json3", tr)
 	}
 	i.Language = ""
 	if tr := i.transcript(); tr != nil {

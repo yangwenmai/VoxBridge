@@ -1,5 +1,6 @@
 // Package doubao adapts Volcengine Doubao Speech: simultaneous
-// interpretation 2.0, machine translation and TTS 2.0, all on one API key.
+// interpretation 2.0, recorded-file recognition 2.0, machine translation
+// and TTS 2.0, all on one API key.
 package doubao
 
 import "github.com/yangwenmai/voxbridge/core"
@@ -70,6 +71,19 @@ var capabilities = core.Capabilities{
 			Pricing: core.Pricing{
 				Unit: "token", Currency: "CNY", PerHour: 21,
 				Basis: "输入 80 元/百万 token（约 6.25 token/秒），输出音频 300 元/百万 token（约 25 token/秒），按译音时长约为原声 70% 估算",
+			},
+		},
+		{
+			Capability: core.CapRecognize,
+			Model:      asrRes,
+			// The service also handles dialects and other languages, but
+			// only Chinese and English are listed by name; VoxBridge sends
+			// no language hint.
+			Languages:       []core.LangRule{{From: langs("zh", "en"), To: langs("zh", "en")}},
+			InputSampleRate: asrSampleRate,
+			Pricing: core.Pricing{
+				Unit: "hour", Currency: "CNY", PerHour: 0.8,
+				Basis: "豆包录音文件识别模型 2.0 0.8 元/小时",
 			},
 		},
 		{

@@ -43,6 +43,7 @@
 - `source_language` 可省略，自动检测。`detected_source_language` **只在没传 `source_language` 时返回**。
 - 支持 32 种语言互译：zh、zh-Hant、en、ja、ko、fr、de、es、pt、ru、ar、it、nl、pl、ro、sv、da、nb、fi、hu、cs、hr、el、he、tr、uk、th、vi、id、ms、tl、hi。
 - 超长返回 45000130。
+- 用量在每条译文里：`translation_list[].usage.{prompt_tokens,completion_tokens}`（2026-11-12 实测，顶层没有 `usage`）。录下的响应在 `provider/doubao/testdata/mt_ok.json`。
 - 价格：输入 1.8 元、输出 5.4 元每百万 token。一小时英文约一万多 token，不到 0.1 元。
 
 ### 语音合成 2.0
@@ -52,6 +53,41 @@
 - 规格列的 6 个音色都在官方 2.0 音色表里：Vivi 2.0、云舟 2.0、小何 2.0、小天 2.0、刘飞 2.0、魅力苏菲 2.0。
 - 价格：3 元每万字符（资源包最低 2.1 元）。一小时英文译成中文约 1.5 万到 1.8 万字，约 4.5 到 5.4 元。加上机器翻译，和规格「一小时 5 到 6 元」一致；同传约 21 元，约为配音的四倍，也和规格一致（都是估算）。
 
+### 录音文件识别 2.0（预先配音没有平台字幕时用）
+
+- 文档：[录音文件识别简介](https://docs.volcengine.com/docs/doubao-voice/access-must-read-1?lang=zh)，[计费](https://docs.volcengine.com/docs/doubao-voice/billing-instructions?lang=zh)，[新版控制台指引](https://docs.volcengine.com/docs/doubao-voice/console-guidance?lang=zh)
+- 控制台产品名和 resource id 的对应：
+  - 豆包录音文件识别模型 2.0 标准版：`volc.seedasr.auc`。**VoxBridge 用这个。**
+  - 豆包录音文件识别模型 1.0 标准版：`volc.bigasr.auc`。
+  - 1.0 极速版：`volc.bigasr.auc_turbo`。1.0 闲时版：`volc.bigasr.auc_idle`。**⚠ 这两个已从控制台下线**，存量用户还能用，新用户要找技术支持开通。
+- 2026-11-13 用 Mai 的 Key 实测，只有 `volc.seedasr.auc` 有权限，其余都返回 403、`45000030` requested resource not granted。
+- 开通、API Key 和资源包都绑定在项目上，项目之间相互隔离。开通步骤是：在控制台左上角切到 Key 所在的项目，进「开通管理」，找到模型点「开通」。
+- 两步走：
+  - `POST /api/v3/auc/bigmodel/submit` 提交任务，任务 id 由调用方生成，放在 `X-Api-Request-Id`。
+  - `POST /api/v3/auc/bigmodel/query` 查询，用同一个 id，请求体是 `{}`。
+  - 状态在**响应头** `X-Api-Status-Code`：20000000 完成，20000001 处理中，20000002 排队中，20000003 静音，45000092 任务不存在。消息在 `X-Api-Message`。
+  - 录下的响应在 `provider/doubao/testdata/asr_*.json`。
+- **⚠ 文档没写的用法**：文档里 `audio` 只有 `url`（公网可访问的链接）。实测 `audio.data` 放 base64 mp3（同时传 `format: "mp3"`）也能用，VoxBridge 用的就是这种方式，因为本机 CLI 没有公网 URL。内联大小的上限不知道。实测一次传 34.6 分钟（16 kHz 单声道 24 kbps mp3，约 6 MB，base64 后约 8 MB）可以。保险起见，VoxBridge 按 1 小时一段提交。超过 1 小时时，每段的说话人编号各自独立，不跨段对应（**未验证**：长于 1 小时的整集还没实测）。如果以后官方不再接受 `data`，就只能先把音频上传到对象存储，再提交 URL。
+- 续跑：
+  - 任务 id 在提交**之前**就写进工作目录的 `asr-tasks.json`。
+  - 续跑时，已经提交的任务只查询，不重提。
+  - 存了 id 但不确定有没有提交成功的，先查一次：查得到就接着等；返回 45000092（服务端没有这个任务）才用同一个 id 补交。所以不会为同一段音频付两次钱。
+  - 已经提交过、却查不到的（多半是过期了），会停下来提示，删掉 `asr-tasks.json` 才会重新提交并再次计费。
+  - 识别结果也存进这个文件，之后再跑不再发请求。
+- 说话人：开 `enable_speaker_info`、不指定语言时，英文也会返回标签，在 `utterances[].additions.speaker`（"1"、"2"…）。
+- 价格：后付费 0.8 元/小时（资源包最低约 0.67 元/小时）。之前用的极速版是 4.5 元/小时。
+- 等待时间：官方说「3 小时内返回」。实测 5 秒的音频约 2 秒返回，34.6 分钟的播客从提交到完成约 2 分 30 秒。
+
+### 没有字幕的播客实测（2026-11-13，Planet Money「How surveillance crept up on us」，34:36）
+
+| 步骤 | 请求 | 估算费用 |
+| --- | --- | --- |
+| 提交识别后约 10 秒按 Ctrl-C | 识别：1 次提交、1 次查询 | 0.46 元 |
+| 不加 `--asr` 续跑（已提交过，不再询问） | 识别：0 次提交、26 次查询（等了 2 分 10 秒）；翻译 24 次；合成 377 次，11452 字符 | 3.52 元 |
+| 再跑一次 | 0 次 | 0 元 |
+
+合计约 3.98 元，按公开价估算，没对账单。识别出 377 句、7 位说话人。音色只有 6 个，所以说话最少的那位和说话最多的那位共用 Vivi 2.0。输出 36:32，比原声长 1 分 55 秒（原声在句首等中文时插入的静音）。
+
 ### 实测的错误响应（2026-11-12，用错误的 Key）
 
 | 服务 | HTTP | 响应体 |
@@ -59,6 +95,15 @@
 | 机器翻译 | 500 | `{"code":55000000,"message":"Invalid X-Api-Key"}` |
 | 语音合成 2.0 | 401 | `{"header":{"code":45000010,"message":"Invalid X-Api-Key",...}}` |
 | 同传 WebSocket 握手 | 401 | `{"error":"Invalid X-Api-Key"}` |
+
+### 预先配音实测（2026-11-12，有人工英文字幕的 TED 视频）
+
+| 视频 | 时长 | 句子 | 机器翻译 | 语音合成 2.0 | 估算费用 |
+| --- | --- | --- | --- | --- | --- |
+| Grit（H14bBuluwB8） | 6:13 | 56（1 句跳过） | 4 次请求 | 55 次请求，1596 字符 | 约 0.50 元 |
+| 10 mindful minutes（qzR62JJCMBQ），中途 Ctrl-C 后续跑 | 9:24 | 95（1 句跳过） | 6 次请求（续跑 0 次） | 33 + 63 次请求，2717 字符 | 约 0.84 元 |
+
+合成字数折算约每小时 1.7 万字、5.2 元，和上面的估算一致。估算按公开价，没对账单。
 
 **⚠ 与规格不同**：规格说「HTTP 500 加 55000000」表示服务没开通。实测 Key 本身错了也是 500 加 55000000，要看 message 区分。VoxBridge 先判 `Invalid X-Api-Key`（Key 错），再判 `mismatched` 等词（没开通）。三种响应都带 `X-Tt-Logid`。
 
