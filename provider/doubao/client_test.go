@@ -91,23 +91,6 @@ func TestGivesUpAfterThreeRetries(t *testing.T) {
 	}
 }
 
-func TestNotEnabledIsNotRetried(t *testing.T) {
-	// Recorded 2026-11-12: flash recognition not enabled for the key's project.
-	f := &fakeServer{replies: []wire.Reply{{Status: 403, Body: []byte(`{}`), Header: http.Header{
-		"X-Api-Status-Code": {"45000030"},
-		"X-Api-Message":     {"[resource_id=volc.bigasr.auc_turbo] requested resource not granted"},
-		"X-Tt-Logid":        {"2026111221572808E7D836ACB8F847681C"},
-	}}}}
-	_, err := f.client().recognize(context.Background(), []byte("mp3"))
-	var pe *core.ProviderError
-	if !errors.As(err, &pe) || pe.Kind != core.ErrNotEnabled || pe.LogID != "2026111221572808E7D836ACB8F847681C" {
-		t.Fatalf("err = %#v", err)
-	}
-	if len(f.sent) != 1 {
-		t.Fatalf("sent %d requests, want 1", len(f.sent))
-	}
-}
-
 func TestKeyNeverInErrors(t *testing.T) {
 	f := &fakeServer{replies: []wire.Reply{{Status: 401, Body: []byte(`{"code":45000010,"message":"Invalid X-Api-Key ` + testKey + `"}`)}}}
 	_, err := f.client().Synthesize(context.Background(), "你好", "v")

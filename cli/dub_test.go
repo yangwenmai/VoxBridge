@@ -18,7 +18,7 @@ const podcastURL = "https://media.blubrry.com/x.mp3"
 
 type countingDub struct{ asr, mt, tts int }
 
-func (c *countingDub) Transcribe(context.Context, core.AudioInput) ([]core.Line, error) {
+func (c *countingDub) Transcribe(context.Context, core.AudioInput, core.RecognizeTasks) ([]core.Line, error) {
 	c.asr++
 	return nil, errors.New("stop after recognition")
 }
@@ -78,7 +78,7 @@ func TestNoSubtitlesWithoutTTYAsksForASRFlag(t *testing.T) {
 	if code == 0 || c.asr+c.mt+c.tts != 0 {
 		t.Fatalf("exit %d, requests %+v", code, c)
 	}
-	if !strings.Contains(stderr, "--asr") || !strings.Contains(stderr, "约 13.59 元") {
+	if !strings.Contains(stderr, "--asr") || !strings.Contains(stderr, "约 2.42 元") {
 		t.Fatalf("stderr = %s", stderr)
 	}
 }
@@ -90,7 +90,7 @@ func TestNoSubtitlesDeclinedMakesNoRequest(t *testing.T) {
 		if code == 0 || c.asr+c.mt+c.tts != 0 {
 			t.Fatalf("answer %q: exit %d, requests %+v", answer, code, c)
 		}
-		for _, want := range []string{"3:01:15", "豆包语音（火山引擎）", "volc.bigasr.auc_turbo", "识别约 13.59 元", "[y/N]", "已取消，没有发出任何请求。"} {
+		for _, want := range []string{"3:01:15", "豆包语音（火山引擎）", "volc.seedasr.auc", "识别约 2.42 元", "[y/N]", "已取消，没有发出任何请求。"} {
 			if !strings.Contains(stdout, want) {
 				t.Fatalf("answer %q: prompt lacks %q:\n%s", answer, want, stdout)
 			}
@@ -136,5 +136,17 @@ func TestRedirectedStdinIsNotInteractive(t *testing.T) {
 	defer w.Close()
 	if isTerminal(null) || isTerminal(r) {
 		t.Fatal("/dev/null or a pipe counted as a terminal; it would be prompted instead of told to pass --asr")
+	}
+}
+
+func TestSubmittedRecognitionResumesWithoutAsking(t *testing.T) {
+	c := withPodcast(t, false, "")
+	dir := outWithOriginal(t)
+	if err := os.WriteFile(filepath.Join(dir, "asr-tasks.json"), []byte(`{}`), 0o644); err != nil {
+		t.Fatal(err)
+	}
+	_, stdout, _ := runDub(t, "--out", dir)
+	if c.asr != 1 || strings.Contains(stdout, "[y/N]") {
+		t.Fatalf("resume: %d recognitions, prompt shown: %v", c.asr, strings.Contains(stdout, "[y/N]"))
 	}
 }

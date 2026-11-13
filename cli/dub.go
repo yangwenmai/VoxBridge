@@ -97,9 +97,8 @@ func dubCmd(ctx context.Context, args []string, stdout, stderr io.Writer) int {
 
 	// Remote recognition uploads the whole episode and bills by the hour,
 	// so it only runs on --asr or an explicit yes. A directory that already
-	// holds a manifest has its sentences and needs no recognition.
-	_, statErr := os.Stat(filepath.Join(dir, "manifest.json"))
-	if src.Transcript == nil && !*asr && statErr != nil {
+	// holds a manifest or submitted tasks was confirmed and paid for before.
+	if src.Transcript == nil && !*asr && !exists(dir, "manifest.json") && !exists(dir, dub.TasksFile) {
 		asrCost := svc.asrPerHour * hours
 		if !interactive() {
 			fmt.Fprintf(stderr, "这个链接没有平台字幕，配音要先用%s的语音识别（%s）把整集音频上传识别，约 %.2f 元。\n"+
@@ -137,7 +136,7 @@ func dubCmd(ctx context.Context, args []string, stdout, stderr io.Writer) int {
 	printUsage(stdout, d.Usage())
 	if err != nil {
 		if ctx.Err() != nil {
-			fmt.Fprintf(stderr, "已中断。做完的句子都存在 %s，再跑一次同样的命令会接着做。\n", filepath.Join(dir, "manifest.json"))
+			fmt.Fprintf(stderr, "已中断。已做完的（包括已提交的识别任务）都存在 %s，再跑一次同样的命令会接着做，不会重复计费。\n", dir)
 			return 130
 		}
 		fmt.Fprintf(stderr, "配音没做完：%s\n已做完的留在 %s，修好后再跑一次同样的命令会接着做。\n", describeErr(err), dir)
@@ -229,6 +228,11 @@ func pickDubber(keys map[string]config.Entry, from core.Lang, needASR bool) (cor
 		return nil, dubServices{}, "这个链接没有平台字幕，已配置的厂商里没有能识别语音再翻译成中文的。"
 	}
 	return nil, dubServices{}, fmt.Sprintf("已配置的厂商不支持把 %s 翻译成中文。", from)
+}
+
+func exists(dir, name string) bool {
+	_, err := os.Stat(filepath.Join(dir, name))
+	return err == nil
 }
 
 func baseLang(l core.Lang) core.Lang {

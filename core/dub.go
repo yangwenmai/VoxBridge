@@ -19,7 +19,17 @@ type Audio struct {
 }
 
 type Recognizer interface {
-	Transcribe(ctx context.Context, audio AudioInput) ([]Line, error)
+	Transcribe(ctx context.Context, audio AudioInput, tasks RecognizeTasks) ([]Line, error)
+}
+
+// RecognizeTasks keeps a recognizer's submitted tasks in the dub's working
+// directory, so an interrupted run waits on the tasks it already paid for
+// instead of submitting them again. The format is the recognizer's own.
+type RecognizeTasks interface {
+	// Load returns nil when nothing was saved.
+	Load() ([]byte, error)
+	Save(state []byte) error
+	Progress(format string, args ...any)
 }
 
 // Translator returns one translation per input text, in order.

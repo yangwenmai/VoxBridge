@@ -10,6 +10,7 @@ import (
 	"time"
 
 	"github.com/yangwenmai/voxbridge/core"
+	"github.com/yangwenmai/voxbridge/media"
 	"github.com/yangwenmai/voxbridge/provider/internal/wire"
 )
 
@@ -21,6 +22,9 @@ type Client struct {
 	key  string
 	send func(ctx context.Context, method, url string, h http.Header, body []byte) (wire.Reply, error)
 	wait func(ctx context.Context, d time.Duration) error
+	// probe and encode read the local audio for recognition.
+	probe  func(ctx context.Context, url string, headers map[string]string) (media.Probe, error)
+	encode func(ctx context.Context, in core.AudioInput, offsetMs, durationMs int64) ([]byte, error)
 
 	mu       sync.Mutex
 	requests map[core.Capability]int
@@ -33,6 +37,8 @@ func NewClient(key string) *Client {
 		key:      key,
 		send:     wire.DoSlow,
 		wait:     sleep,
+		probe:    media.FFprobe,
+		encode:   encodeChunk,
 		requests: map[core.Capability]int{},
 		units:    map[core.Capability]float64{},
 	}

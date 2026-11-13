@@ -26,6 +26,9 @@ const (
 	AudioFile      = "dub.m4a"
 	SRTFile        = "dub.srt"
 	linesDir       = "lines"
+	// TasksFile holds the recognizer's submitted tasks until the manifest
+	// has the sentences.
+	TasksFile = "asr-tasks.json"
 )
 
 type Options struct {
@@ -166,7 +169,7 @@ func newManifest(ctx context.Context, src core.Source, o Options, original strin
 		}
 		fmt.Fprintln(log, "没有平台字幕，识别语音…")
 		var err error
-		lines, err = o.Dubbing.Recognizer.Transcribe(ctx, core.AudioInput{URL: original})
+		lines, err = o.Dubbing.Recognizer.Transcribe(ctx, core.AudioInput{URL: original}, taskFile{dir: o.Dir, log: log})
 		if err != nil {
 			return nil, err
 		}
@@ -324,6 +327,27 @@ func synthesize(ctx context.Context, m *core.DubManifest, o Options, log io.Writ
 		return firstErr
 	}
 	return ctx.Err()
+}
+
+type taskFile struct {
+	dir string
+	log io.Writer
+}
+
+func (t taskFile) Load() ([]byte, error) {
+	b, err := os.ReadFile(filepath.Join(t.dir, TasksFile))
+	if errors.Is(err, os.ErrNotExist) {
+		return nil, nil
+	}
+	return b, err
+}
+
+func (t taskFile) Save(state []byte) error {
+	return writeAtomic(filepath.Join(t.dir, TasksFile), state)
+}
+
+func (t taskFile) Progress(format string, args ...any) {
+	fmt.Fprintf(t.log, format+"\n", args...)
 }
 
 // cacheOriginal saves the source audio as 24 kHz mono flac.

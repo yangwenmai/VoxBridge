@@ -1,0 +1,9 @@
+{
+ "status": 200,
+ "header": {
+  "X-Api-Status-Code": "20000001",
+  "X-Api-Message": "[Processing in progress] Handle response: Start Processing",
+  "X-Tt-Logid": "202611131226456288593C07B619F750ED"
+ },
+ "body": "{\"audio_info\":{},\"result\":{\"text\":\"\"}}"
+}
